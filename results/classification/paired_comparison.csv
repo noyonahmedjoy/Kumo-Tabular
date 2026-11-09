@@ -1,0 +1,6 @@
+metric,baseline,splits,kumo_wins,ties,kumo_losses,mean_advantage,std_advantage
+accuracy,Logistic Regression,5,5,0,0,0.01228070175438598,0.007845852552630815
+precision,Logistic Regression,5,2,3,0,0.005110741971207089,0.011121018131486244
+recall,Logistic Regression,5,5,0,0,0.02857142857142858,0.01064794274999896
+f1,Logistic Regression,5,5,0,0,0.01722606396527333,0.010910732361157699
+roc_auc,Logistic Regression,5,4,1,0,0.0029761904761904877,0.0034445546719575957

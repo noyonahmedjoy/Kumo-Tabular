@@ -1,0 +1,4 @@
+metric,baseline,splits,kumo_wins,ties,kumo_losses,mean_advantage,std_advantage
+mae,Linear Regression,5,4,0,1,1.2685125826070418,1.0997635261992231
+rmse,Linear Regression,5,3,0,2,0.39262345325534226,1.432745430629058
+r2,Linear Regression,5,3,0,2,0.007175458832332371,0.028440888140446704

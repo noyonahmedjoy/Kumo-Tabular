@@ -1,0 +1,4 @@
+metric,higher_is_better,best_model,best_value,kumo_value,best_baseline,best_baseline_value,kumo_minus_best_baseline,kumo_better
+mae,False,Kumo Tabular,42.477865189112975,42.477865189112975,Linear Regression,43.74637777172002,-1.2685125826070447,True
+rmse,False,Kumo Tabular,52.87972791028581,52.87972791028581,Linear Regression,53.272351363541155,-0.39262345325534653,True
+r2,True,Kumo Tabular,0.5031220219648017,0.5031220219648017,Linear Regression,0.4959465631324694,0.007175458832332338,True

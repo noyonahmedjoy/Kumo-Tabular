@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\caption{Per-split results of Kumo Tabular and the strongest baseline. Seeds define the train/test partition shared by all models.}
+\label{tab:per_split}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{ccccc}
+\toprule
+& \multicolumn{2}{c}{Accuracy} & \multicolumn{2}{c}{$R^2$} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Seed & Kumo & Logistic Reg. & Kumo & Linear Reg. \\
+\midrule
+42 & 0.991 & 0.965 & 0.499 & 0.453 \\
+43 & 1.000 & 0.991 & 0.556 & 0.542 \\
+44 & 0.974 & 0.965 & 0.524 & 0.525 \\
+45 & 0.991 & 0.982 & 0.486 & 0.519 \\
+46 & 0.991 & 0.982 & 0.451 & 0.441 \\
+\bottomrule
+\end{tabular}
+\end{table}
