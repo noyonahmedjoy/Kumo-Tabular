@@ -1,0 +1,1826 @@
+{
+  "criteria": {
+    "source": "OpenML-CC18 (study 99) and OpenML-CTR23 (study 353)",
+    "rows": [
+      150,
+      2000
+    ],
+    "max_features": 60,
+    "categorical_features": 0,
+    "missing_values": 0,
+    "max_classes": 10
+  },
+  "classification": [
+    {
+      "data_id": 11,
+      "task_id": 11,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/11/Task_11_splits.arff",
+      "name": "balance-scale",
+      "version": 1,
+      "rows": 625,
+      "features": 4,
+      "classes": 3
+    },
+    {
+      "data_id": 18,
+      "task_id": 18,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/18/Task_18_splits.arff",
+      "name": "mfeat-morphological",
+      "version": 1,
+      "rows": 2000,
+      "features": 6,
+      "classes": 10
+    },
+    {
+      "data_id": 22,
+      "task_id": 22,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/22/Task_22_splits.arff",
+      "name": "mfeat-zernike",
+      "version": 1,
+      "rows": 2000,
+      "features": 47,
+      "classes": 10
+    },
+    {
+      "data_id": 37,
+      "task_id": 37,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/37/Task_37_splits.arff",
+      "name": "diabetes",
+      "version": 1,
+      "rows": 768,
+      "features": 8,
+      "classes": 2
+    },
+    {
+      "data_id": 54,
+      "task_id": 53,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/53/Task_53_splits.arff",
+      "name": "vehicle",
+      "version": 1,
+      "rows": 846,
+      "features": 18,
+      "classes": 4
+    },
+    {
+      "data_id": 1049,
+      "task_id": 3902,
+      "target": "c",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/3902/Task_3902_splits.arff",
+      "name": "pc4",
+      "version": 1,
+      "rows": 1458,
+      "features": 37,
+      "classes": 2
+    },
+    {
+      "data_id": 1050,
+      "task_id": 3903,
+      "target": "c",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/3903/Task_3903_splits.arff",
+      "name": "pc3",
+      "version": 1,
+      "rows": 1563,
+      "features": 37,
+      "classes": 2
+    },
+    {
+      "data_id": 1063,
+      "task_id": 3913,
+      "target": "problems",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/3913/Task_3913_splits.arff",
+      "name": "kc2",
+      "version": 1,
+      "rows": 522,
+      "features": 21,
+      "classes": 2
+    },
+    {
+      "data_id": 1068,
+      "task_id": 3918,
+      "target": "defects",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/3918/Task_3918_splits.arff",
+      "name": "pc1",
+      "version": 1,
+      "rows": 1109,
+      "features": 21,
+      "classes": 2
+    },
+    {
+      "data_id": 1462,
+      "task_id": 10093,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/10093/Task_10093_splits.arff",
+      "name": "banknote-authentication",
+      "version": 1,
+      "rows": 1372,
+      "features": 4,
+      "classes": 2
+    },
+    {
+      "data_id": 1464,
+      "task_id": 10101,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/10101/Task_10101_splits.arff",
+      "name": "blood-transfusion-service-center",
+      "version": 1,
+      "rows": 748,
+      "features": 4,
+      "classes": 2
+    },
+    {
+      "data_id": 1494,
+      "task_id": 9957,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/9957/Task_9957_splits.arff",
+      "name": "qsar-biodeg",
+      "version": 1,
+      "rows": 1055,
+      "features": 41,
+      "classes": 2
+    },
+    {
+      "data_id": 1510,
+      "task_id": 9946,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/9946/Task_9946_splits.arff",
+      "name": "wdbc",
+      "version": 1,
+      "rows": 569,
+      "features": 30,
+      "classes": 2
+    },
+    {
+      "data_id": 40982,
+      "task_id": 146817,
+      "target": "target",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/146817/Task_146817_splits.arff",
+      "name": "steel-plates-fault",
+      "version": 3,
+      "rows": 1941,
+      "features": 27,
+      "classes": 7
+    },
+    {
+      "data_id": 40994,
+      "task_id": 146819,
+      "target": "outcome",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/146819/Task_146819_splits.arff",
+      "name": "climate-model-simulation-crashes",
+      "version": 4,
+      "rows": 540,
+      "features": 20,
+      "classes": 2
+    }
+  ],
+  "classification_excluded": [
+    {
+      "data_id": 3,
+      "task_id": 3,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/3/Task_3_splits.arff",
+      "name": "kr-vs-kp",
+      "version": 1,
+      "rows": 3196,
+      "features": 36,
+      "classes": 2,
+      "excluded_because": [
+        "rows=3196",
+        "categorical_features=36"
+      ]
+    },
+    {
+      "data_id": 6,
+      "task_id": 6,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/6/Task_6_splits.arff",
+      "name": "letter",
+      "version": 1,
+      "rows": 20000,
+      "features": 16,
+      "classes": 26,
+      "excluded_because": [
+        "rows=20000",
+        "classes=26"
+      ]
+    },
+    {
+      "data_id": 12,
+      "task_id": 12,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/12/Task_12_splits.arff",
+      "name": "mfeat-factors",
+      "version": 1,
+      "rows": 2000,
+      "features": 216,
+      "classes": 10,
+      "excluded_because": [
+        "features=216"
+      ]
+    },
+    {
+      "data_id": 14,
+      "task_id": 14,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/14/Task_14_splits.arff",
+      "name": "mfeat-fourier",
+      "version": 1,
+      "rows": 2000,
+      "features": 76,
+      "classes": 10,
+      "excluded_because": [
+        "features=76"
+      ]
+    },
+    {
+      "data_id": 15,
+      "task_id": 15,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/15/Task_15_splits.arff",
+      "name": "breast-w",
+      "version": 1,
+      "rows": 699,
+      "features": 9,
+      "classes": 2,
+      "excluded_because": [
+        "missing_values=16"
+      ]
+    },
+    {
+      "data_id": 16,
+      "task_id": 16,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/16/Task_16_splits.arff",
+      "name": "mfeat-karhunen",
+      "version": 1,
+      "rows": 2000,
+      "features": 64,
+      "classes": 10,
+      "excluded_because": [
+        "features=64"
+      ]
+    },
+    {
+      "data_id": 23,
+      "task_id": 23,
+      "target": "Contraceptive_method_used",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/23/Task_23_splits.arff",
+      "name": "cmc",
+      "version": 1,
+      "rows": 1473,
+      "features": 9,
+      "classes": 3,
+      "excluded_because": [
+        "categorical_features=7"
+      ]
+    },
+    {
+      "data_id": 28,
+      "task_id": 28,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/28/Task_28_splits.arff",
+      "name": "optdigits",
+      "version": 1,
+      "rows": 5620,
+      "features": 64,
+      "classes": 10,
+      "excluded_because": [
+        "rows=5620",
+        "features=64"
+      ]
+    },
+    {
+      "data_id": 29,
+      "task_id": 29,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/29/Task_29_splits.arff",
+      "name": "credit-approval",
+      "version": 1,
+      "rows": 690,
+      "features": 15,
+      "classes": 2,
+      "excluded_because": [
+        "categorical_features=9",
+        "missing_values=67"
+      ]
+    },
+    {
+      "data_id": 31,
+      "task_id": 31,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/31/Task_31_splits.arff",
+      "name": "credit-g",
+      "version": 1,
+      "rows": 1000,
+      "features": 20,
+      "classes": 2,
+      "excluded_because": [
+        "categorical_features=13"
+      ]
+    },
+    {
+      "data_id": 32,
+      "task_id": 32,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/32/Task_32_splits.arff",
+      "name": "pendigits",
+      "version": 1,
+      "rows": 10992,
+      "features": 16,
+      "classes": 10,
+      "excluded_because": [
+        "rows=10992"
+      ]
+    },
+    {
+      "data_id": 38,
+      "task_id": 3021,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/3021/Task_3021_splits.arff",
+      "name": "sick",
+      "version": 1,
+      "rows": 3772,
+      "features": 29,
+      "classes": 2,
+      "excluded_because": [
+        "rows=3772",
+        "categorical_features=22",
+        "missing_values=6064"
+      ]
+    },
+    {
+      "data_id": 44,
+      "task_id": 43,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/43/Task_43_splits.arff",
+      "name": "spambase",
+      "version": 1,
+      "rows": 4601,
+      "features": 57,
+      "classes": 2,
+      "excluded_because": [
+        "rows=4601"
+      ]
+    },
+    {
+      "data_id": 46,
+      "task_id": 45,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/45/Task_45_splits.arff",
+      "name": "splice",
+      "version": 1,
+      "rows": 3190,
+      "features": 60,
+      "classes": 3,
+      "excluded_because": [
+        "rows=3190",
+        "categorical_features=60"
+      ]
+    },
+    {
+      "data_id": 50,
+      "task_id": 49,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/49/Task_49_splits.arff",
+      "name": "tic-tac-toe",
+      "version": 1,
+      "rows": 958,
+      "features": 9,
+      "classes": 2,
+      "excluded_because": [
+        "categorical_features=9"
+      ]
+    },
+    {
+      "data_id": 151,
+      "task_id": 219,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/219/Task_219_splits.arff",
+      "name": "electricity",
+      "version": 1,
+      "rows": 45312,
+      "features": 8,
+      "classes": 2,
+      "excluded_because": [
+        "rows=45312",
+        "categorical_features=1"
+      ]
+    },
+    {
+      "data_id": 182,
+      "task_id": 2074,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/2074/Task_2074_splits.arff",
+      "name": "satimage",
+      "version": 1,
+      "rows": 6430,
+      "features": 36,
+      "classes": 6,
+      "excluded_because": [
+        "rows=6430"
+      ]
+    },
+    {
+      "data_id": 188,
+      "task_id": 2079,
+      "target": "Utility",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/2079/Task_2079_splits.arff",
+      "name": "eucalyptus",
+      "version": 1,
+      "rows": 736,
+      "features": 19,
+      "classes": 5,
+      "excluded_because": [
+        "categorical_features=5",
+        "missing_values=448"
+      ]
+    },
+    {
+      "data_id": 300,
+      "task_id": 3481,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/3481/Task_3481_splits.arff",
+      "name": "isolet",
+      "version": 1,
+      "rows": 7797,
+      "features": 617,
+      "classes": 26,
+      "excluded_because": [
+        "rows=7797",
+        "features=617",
+        "classes=26"
+      ]
+    },
+    {
+      "data_id": 307,
+      "task_id": 3022,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/3022/Task_3022_splits.arff",
+      "name": "vowel",
+      "version": 2,
+      "rows": 990,
+      "features": 12,
+      "classes": 11,
+      "excluded_because": [
+        "categorical_features=2",
+        "classes=11"
+      ]
+    },
+    {
+      "data_id": 458,
+      "task_id": 3549,
+      "target": "Author",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/3549/Task_3549_splits.arff",
+      "name": "analcatdata_authorship",
+      "version": 1,
+      "rows": 841,
+      "features": 70,
+      "classes": 4,
+      "excluded_because": [
+        "features=70"
+      ]
+    },
+    {
+      "data_id": 469,
+      "task_id": 3560,
+      "target": "Prevention",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/3560/Task_3560_splits.arff",
+      "name": "analcatdata_dmft",
+      "version": 1,
+      "rows": 797,
+      "features": 4,
+      "classes": 6,
+      "excluded_because": [
+        "categorical_features=4"
+      ]
+    },
+    {
+      "data_id": 554,
+      "task_id": 3573,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/3573/Task_3573_splits.arff",
+      "name": "mnist_784",
+      "version": 1,
+      "rows": 70000,
+      "features": 784,
+      "classes": 10,
+      "excluded_because": [
+        "rows=70000",
+        "features=784"
+      ]
+    },
+    {
+      "data_id": 1053,
+      "task_id": 3904,
+      "target": "defects",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/3904/Task_3904_splits.arff",
+      "name": "jm1",
+      "version": 1,
+      "rows": 10885,
+      "features": 21,
+      "classes": 2,
+      "excluded_because": [
+        "rows=10885",
+        "missing_values=25"
+      ]
+    },
+    {
+      "data_id": 1067,
+      "task_id": 3917,
+      "target": "defects",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/3917/Task_3917_splits.arff",
+      "name": "kc1",
+      "version": 1,
+      "rows": 2109,
+      "features": 21,
+      "classes": 2,
+      "excluded_because": [
+        "rows=2109"
+      ]
+    },
+    {
+      "data_id": 1461,
+      "task_id": 14965,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/14965/Task_14965_splits.arff",
+      "name": "bank-marketing",
+      "version": 1,
+      "rows": 45211,
+      "features": 16,
+      "classes": 2,
+      "excluded_because": [
+        "rows=45211",
+        "categorical_features=9"
+      ]
+    },
+    {
+      "data_id": 1468,
+      "task_id": 9981,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/9981/Task_9981_splits.arff",
+      "name": "cnae-9",
+      "version": 1,
+      "rows": 1080,
+      "features": 856,
+      "classes": 9,
+      "excluded_because": [
+        "features=856"
+      ]
+    },
+    {
+      "data_id": 1475,
+      "task_id": 9985,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/9985/Task_9985_splits.arff",
+      "name": "first-order-theorem-proving",
+      "version": 1,
+      "rows": 6118,
+      "features": 51,
+      "classes": 6,
+      "excluded_because": [
+        "rows=6118"
+      ]
+    },
+    {
+      "data_id": 1478,
+      "task_id": 14970,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/14970/Task_14970_splits.arff",
+      "name": "har",
+      "version": 1,
+      "rows": 10299,
+      "features": 561,
+      "classes": 6,
+      "excluded_because": [
+        "rows=10299",
+        "features=561"
+      ]
+    },
+    {
+      "data_id": 1480,
+      "task_id": 9971,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/9971/Task_9971_splits.arff",
+      "name": "ilpd",
+      "version": 1,
+      "rows": 583,
+      "features": 10,
+      "classes": 2,
+      "excluded_because": [
+        "categorical_features=1"
+      ]
+    },
+    {
+      "data_id": 1485,
+      "task_id": 9976,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/9976/Task_9976_splits.arff",
+      "name": "madelon",
+      "version": 1,
+      "rows": 2600,
+      "features": 500,
+      "classes": 2,
+      "excluded_because": [
+        "rows=2600",
+        "features=500"
+      ]
+    },
+    {
+      "data_id": 1486,
+      "task_id": 9977,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/9977/Task_9977_splits.arff",
+      "name": "nomao",
+      "version": 1,
+      "rows": 34465,
+      "features": 118,
+      "classes": 2,
+      "excluded_because": [
+        "rows=34465",
+        "features=118",
+        "categorical_features=29"
+      ]
+    },
+    {
+      "data_id": 1487,
+      "task_id": 9978,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/9978/Task_9978_splits.arff",
+      "name": "ozone-level-8hr",
+      "version": 1,
+      "rows": 2534,
+      "features": 72,
+      "classes": 2,
+      "excluded_because": [
+        "rows=2534",
+        "features=72"
+      ]
+    },
+    {
+      "data_id": 1489,
+      "task_id": 9952,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/9952/Task_9952_splits.arff",
+      "name": "phoneme",
+      "version": 1,
+      "rows": 5404,
+      "features": 5,
+      "classes": 2,
+      "excluded_because": [
+        "rows=5404"
+      ]
+    },
+    {
+      "data_id": 1497,
+      "task_id": 9960,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/9960/Task_9960_splits.arff",
+      "name": "wall-robot-navigation",
+      "version": 1,
+      "rows": 5456,
+      "features": 24,
+      "classes": 4,
+      "excluded_because": [
+        "rows=5456"
+      ]
+    },
+    {
+      "data_id": 1501,
+      "task_id": 9964,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/9964/Task_9964_splits.arff",
+      "name": "semeion",
+      "version": 1,
+      "rows": 1593,
+      "features": 256,
+      "classes": 10,
+      "excluded_because": [
+        "features=256"
+      ]
+    },
+    {
+      "data_id": 1590,
+      "task_id": 7592,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/7592/Task_7592_splits.arff",
+      "name": "adult",
+      "version": 2,
+      "rows": 48842,
+      "features": 14,
+      "classes": 2,
+      "excluded_because": [
+        "rows=48842",
+        "categorical_features=8",
+        "missing_values=6465"
+      ]
+    },
+    {
+      "data_id": 4134,
+      "task_id": 9910,
+      "target": "target",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/9910/Task_9910_splits.arff",
+      "name": "Bioresponse",
+      "version": 1,
+      "rows": 3751,
+      "features": 1776,
+      "classes": 2,
+      "excluded_because": [
+        "rows=3751",
+        "features=1776"
+      ]
+    },
+    {
+      "data_id": 4534,
+      "task_id": 14952,
+      "target": "Result",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/14952/Task_14952_splits.arff",
+      "name": "PhishingWebsites",
+      "version": 1,
+      "rows": 11055,
+      "features": 30,
+      "classes": 2,
+      "excluded_because": [
+        "rows=11055",
+        "categorical_features=30"
+      ]
+    },
+    {
+      "data_id": 4538,
+      "task_id": 14969,
+      "target": "Phase",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/14969/Task_14969_splits.arff",
+      "name": "GesturePhaseSegmentationProcessed",
+      "version": 1,
+      "rows": 9873,
+      "features": 32,
+      "classes": 5,
+      "excluded_because": [
+        "rows=9873"
+      ]
+    },
+    {
+      "data_id": 6332,
+      "task_id": 14954,
+      "target": "band_type",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/14954/Task_14954_splits.arff",
+      "name": "cylinder-bands",
+      "version": 2,
+      "rows": 540,
+      "features": 39,
+      "classes": 2,
+      "excluded_because": [
+        "categorical_features=21",
+        "missing_values=999"
+      ]
+    },
+    {
+      "data_id": 23381,
+      "task_id": 125920,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/125920/Task_125920_splits.arff",
+      "name": "dresses-sales",
+      "version": 2,
+      "rows": 500,
+      "features": 12,
+      "classes": 2,
+      "excluded_because": [
+        "categorical_features=11",
+        "missing_values=835"
+      ]
+    },
+    {
+      "data_id": 23517,
+      "task_id": 167120,
+      "target": "attribute_21",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/167120/Task_167120_splits.arff",
+      "name": "numerai28.6",
+      "version": 2,
+      "rows": 96320,
+      "features": 21,
+      "classes": 2,
+      "excluded_because": [
+        "rows=96320"
+      ]
+    },
+    {
+      "data_id": 40499,
+      "task_id": 125922,
+      "target": "Class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/125922/Task_125922_splits.arff",
+      "name": "texture",
+      "version": 1,
+      "rows": 5500,
+      "features": 40,
+      "classes": 11,
+      "excluded_because": [
+        "rows=5500",
+        "classes=11"
+      ]
+    },
+    {
+      "data_id": 40668,
+      "task_id": 146195,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/146195/Task_146195_splits.arff",
+      "name": "connect-4",
+      "version": 2,
+      "rows": 67557,
+      "features": 42,
+      "classes": 3,
+      "excluded_because": [
+        "rows=67557",
+        "categorical_features=42"
+      ]
+    },
+    {
+      "data_id": 40670,
+      "task_id": 167140,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/167140/Task_167140_splits.arff",
+      "name": "dna",
+      "version": 1,
+      "rows": 3186,
+      "features": 180,
+      "classes": 3,
+      "excluded_because": [
+        "rows=3186",
+        "features=180",
+        "categorical_features=180"
+      ]
+    },
+    {
+      "data_id": 40701,
+      "task_id": 167141,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/167141/Task_167141_splits.arff",
+      "name": "churn",
+      "version": 1,
+      "rows": 5000,
+      "features": 20,
+      "classes": 2,
+      "excluded_because": [
+        "rows=5000",
+        "categorical_features=4"
+      ]
+    },
+    {
+      "data_id": 40923,
+      "task_id": 167121,
+      "target": "character",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/167121/Task_167121_splits.arff",
+      "name": "Devnagari-Script",
+      "version": 1,
+      "rows": 92000,
+      "features": 1024,
+      "classes": 46,
+      "excluded_because": [
+        "rows=92000",
+        "features=1024",
+        "classes=46"
+      ]
+    },
+    {
+      "data_id": 40927,
+      "task_id": 167124,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/167124/Task_167124_splits.arff",
+      "name": "CIFAR_10",
+      "version": 1,
+      "rows": 60000,
+      "features": 3072,
+      "classes": 10,
+      "excluded_because": [
+        "rows=60000",
+        "features=3072"
+      ]
+    },
+    {
+      "data_id": 40966,
+      "task_id": 146800,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/146800/Task_146800_splits.arff",
+      "name": "MiceProtein",
+      "version": 4,
+      "rows": 1080,
+      "features": 81,
+      "classes": 8,
+      "excluded_because": [
+        "features=81",
+        "categorical_features=4",
+        "missing_values=1396"
+      ]
+    },
+    {
+      "data_id": 40975,
+      "task_id": 146821,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/146821/Task_146821_splits.arff",
+      "name": "car",
+      "version": 3,
+      "rows": 1728,
+      "features": 6,
+      "classes": 4,
+      "excluded_because": [
+        "categorical_features=6"
+      ]
+    },
+    {
+      "data_id": 40978,
+      "task_id": 167125,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/167125/Task_167125_splits.arff",
+      "name": "Internet-Advertisements",
+      "version": 2,
+      "rows": 3279,
+      "features": 1558,
+      "classes": 2,
+      "excluded_because": [
+        "rows=3279",
+        "features=1558",
+        "categorical_features=1555"
+      ]
+    },
+    {
+      "data_id": 40979,
+      "task_id": 146824,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/146824/Task_146824_splits.arff",
+      "name": "mfeat-pixel",
+      "version": 3,
+      "rows": 2000,
+      "features": 240,
+      "classes": 10,
+      "excluded_because": [
+        "features=240"
+      ]
+    },
+    {
+      "data_id": 40983,
+      "task_id": 146820,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/146820/Task_146820_splits.arff",
+      "name": "wilt",
+      "version": 2,
+      "rows": 4839,
+      "features": 5,
+      "classes": 2,
+      "excluded_because": [
+        "rows=4839"
+      ]
+    },
+    {
+      "data_id": 40984,
+      "task_id": 146822,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/146822/Task_146822_splits.arff",
+      "name": "segment",
+      "version": 3,
+      "rows": 2310,
+      "features": 19,
+      "classes": 7,
+      "excluded_because": [
+        "rows=2310"
+      ]
+    },
+    {
+      "data_id": 40996,
+      "task_id": 146825,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/146825/Task_146825_splits.arff",
+      "name": "Fashion-MNIST",
+      "version": 1,
+      "rows": 70000,
+      "features": 784,
+      "classes": 10,
+      "excluded_because": [
+        "rows=70000",
+        "features=784"
+      ]
+    },
+    {
+      "data_id": 41027,
+      "task_id": 167119,
+      "target": "class",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org/api_splits/get/167119/Task_167119_splits.arff",
+      "name": "jungle_chess_2pcs_raw_endgame_complete",
+      "version": 1,
+      "rows": 44819,
+      "features": 6,
+      "classes": 3,
+      "excluded_because": [
+        "rows=44819"
+      ]
+    }
+  ],
+  "regression": [
+    {
+      "data_id": 44957,
+      "task_id": 361235,
+      "target": "sound_pressure",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361235/Task_361235_splits.arff",
+      "name": "airfoil_self_noise",
+      "version": 8,
+      "rows": 1503,
+      "features": 5,
+      "classes": null
+    },
+    {
+      "data_id": 44959,
+      "task_id": 361237,
+      "target": "strength",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361237/Task_361237_splits.arff",
+      "name": "concrete_compressive_strength",
+      "version": 7,
+      "rows": 1030,
+      "features": 8,
+      "classes": null
+    },
+    {
+      "data_id": 44960,
+      "task_id": 361617,
+      "target": "heating_load",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 10,
+      "splits_url": "https://openml.org//api_splits/get/361617/Task_361617_splits.arff",
+      "name": "energy_efficiency",
+      "version": 9,
+      "rows": 768,
+      "features": 8,
+      "classes": null
+    },
+    {
+      "data_id": 44962,
+      "task_id": 361618,
+      "target": "area",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 10,
+      "splits_url": "https://openml.org//api_splits/get/361618/Task_361618_splits.arff",
+      "name": "forest_fires",
+      "version": 9,
+      "rows": 517,
+      "features": 12,
+      "classes": null
+    },
+    {
+      "data_id": 44970,
+      "task_id": 361621,
+      "target": "LC50",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 10,
+      "splits_url": "https://openml.org//api_splits/get/361621/Task_361621_splits.arff",
+      "name": "QSAR_fish_toxicity",
+      "version": 7,
+      "rows": 908,
+      "features": 6,
+      "classes": null
+    },
+    {
+      "data_id": 44972,
+      "task_id": 361250,
+      "target": "quality",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361250/Task_361250_splits.arff",
+      "name": "red_wine",
+      "version": 11,
+      "rows": 1599,
+      "features": 11,
+      "classes": null
+    },
+    {
+      "data_id": 44994,
+      "task_id": 361622,
+      "target": "Price",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 10,
+      "splits_url": "https://openml.org//api_splits/get/361622/Task_361622_splits.arff",
+      "name": "cars",
+      "version": 4,
+      "rows": 804,
+      "features": 17,
+      "classes": null
+    }
+  ],
+  "regression_excluded": [
+    {
+      "data_id": 41021,
+      "task_id": 361616,
+      "target": "RS",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361616/Task_361616_splits.arff",
+      "name": "Moneyball",
+      "version": 2,
+      "rows": 1232,
+      "features": 14,
+      "classes": null,
+      "excluded_because": [
+        "categorical_features=6",
+        "missing_values=3600"
+      ]
+    },
+    {
+      "data_id": 44956,
+      "task_id": 361234,
+      "target": "rings",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361234/Task_361234_splits.arff",
+      "name": "abalone",
+      "version": 15,
+      "rows": 4177,
+      "features": 8,
+      "classes": null,
+      "excluded_because": [
+        "rows=4177",
+        "categorical_features=1"
+      ]
+    },
+    {
+      "data_id": 44958,
+      "task_id": 361236,
+      "target": "verification.time",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361236/Task_361236_splits.arff",
+      "name": "auction_verification",
+      "version": 7,
+      "rows": 2043,
+      "features": 7,
+      "classes": null,
+      "excluded_because": [
+        "rows=2043",
+        "categorical_features=2"
+      ]
+    },
+    {
+      "data_id": 44963,
+      "task_id": 361241,
+      "target": "RMSD",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361241/Task_361241_splits.arff",
+      "name": "physiochemical_protein",
+      "version": 7,
+      "rows": 45730,
+      "features": 9,
+      "classes": null,
+      "excluded_because": [
+        "rows=45730"
+      ]
+    },
+    {
+      "data_id": 44964,
+      "task_id": 361242,
+      "target": "critical_temp",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361242/Task_361242_splits.arff",
+      "name": "superconductivity",
+      "version": 7,
+      "rows": 21263,
+      "features": 81,
+      "classes": null,
+      "excluded_because": [
+        "rows=21263",
+        "features=81"
+      ]
+    },
+    {
+      "data_id": 44965,
+      "task_id": 361243,
+      "target": "latitude",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361243/Task_361243_splits.arff",
+      "name": "geographical_origin_of_music",
+      "version": 7,
+      "rows": 1059,
+      "features": 116,
+      "classes": null,
+      "excluded_because": [
+        "features=116"
+      ]
+    },
+    {
+      "data_id": 44966,
+      "task_id": 361244,
+      "target": "c_class_flares",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361244/Task_361244_splits.arff",
+      "name": "solar_flare",
+      "version": 7,
+      "rows": 1066,
+      "features": 10,
+      "classes": null,
+      "excluded_because": [
+        "categorical_features=8"
+      ]
+    },
+    {
+      "data_id": 44967,
+      "task_id": 361619,
+      "target": "G3",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 10,
+      "splits_url": "https://openml.org//api_splits/get/361619/Task_361619_splits.arff",
+      "name": "student_performance_por",
+      "version": 8,
+      "rows": 649,
+      "features": 30,
+      "classes": null,
+      "excluded_because": [
+        "categorical_features=17"
+      ]
+    },
+    {
+      "data_id": 44969,
+      "task_id": 361247,
+      "target": "gt_compressor_decay_state_coefficient",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361247/Task_361247_splits.arff",
+      "name": "naval_propulsion_plant",
+      "version": 7,
+      "rows": 11934,
+      "features": 14,
+      "classes": null,
+      "excluded_because": [
+        "rows=11934"
+      ]
+    },
+    {
+      "data_id": 44971,
+      "task_id": 361249,
+      "target": "quality",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361249/Task_361249_splits.arff",
+      "name": "white_wine",
+      "version": 7,
+      "rows": 4898,
+      "features": 11,
+      "classes": null,
+      "excluded_because": [
+        "rows=4898"
+      ]
+    },
+    {
+      "data_id": 44973,
+      "task_id": 361251,
+      "target": "stab",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361251/Task_361251_splits.arff",
+      "name": "grid_stability",
+      "version": 7,
+      "rows": 10000,
+      "features": 12,
+      "classes": null,
+      "excluded_because": [
+        "rows=10000"
+      ]
+    },
+    {
+      "data_id": 44974,
+      "task_id": 361252,
+      "target": "utime",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361252/Task_361252_splits.arff",
+      "name": "video_transcoding",
+      "version": 6,
+      "rows": 68784,
+      "features": 18,
+      "classes": null,
+      "excluded_because": [
+        "rows=68784",
+        "categorical_features=2"
+      ]
+    },
+    {
+      "data_id": 44975,
+      "task_id": 361253,
+      "target": "energy_total",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361253/Task_361253_splits.arff",
+      "name": "wave_energy",
+      "version": 6,
+      "rows": 72000,
+      "features": 48,
+      "classes": null,
+      "excluded_because": [
+        "rows=72000"
+      ]
+    },
+    {
+      "data_id": 44976,
+      "task_id": 361254,
+      "target": "V22",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361254/Task_361254_splits.arff",
+      "name": "sarcos",
+      "version": 9,
+      "rows": 48933,
+      "features": 21,
+      "classes": null,
+      "excluded_because": [
+        "rows=48933"
+      ]
+    },
+    {
+      "data_id": 44977,
+      "task_id": 361255,
+      "target": "medianHouseValue",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361255/Task_361255_splits.arff",
+      "name": "california_housing",
+      "version": 7,
+      "rows": 20640,
+      "features": 8,
+      "classes": null,
+      "excluded_because": [
+        "rows=20640"
+      ]
+    },
+    {
+      "data_id": 44978,
+      "task_id": 361256,
+      "target": "usr",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361256/Task_361256_splits.arff",
+      "name": "cpu_activity",
+      "version": 6,
+      "rows": 8192,
+      "features": 21,
+      "classes": null,
+      "excluded_because": [
+        "rows=8192"
+      ]
+    },
+    {
+      "data_id": 44979,
+      "task_id": 361257,
+      "target": "price",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361257/Task_361257_splits.arff",
+      "name": "diamonds",
+      "version": 8,
+      "rows": 53940,
+      "features": 9,
+      "classes": null,
+      "excluded_because": [
+        "rows=53940",
+        "categorical_features=3"
+      ]
+    },
+    {
+      "data_id": 44980,
+      "task_id": 361258,
+      "target": "y",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361258/Task_361258_splits.arff",
+      "name": "kin8nm",
+      "version": 4,
+      "rows": 8192,
+      "features": 8,
+      "classes": null,
+      "excluded_because": [
+        "rows=8192"
+      ]
+    },
+    {
+      "data_id": 44981,
+      "task_id": 361259,
+      "target": "thetadd6",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361259/Task_361259_splits.arff",
+      "name": "pumadyn32nh",
+      "version": 2,
+      "rows": 8192,
+      "features": 32,
+      "classes": null,
+      "excluded_because": [
+        "rows=8192"
+      ]
+    },
+    {
+      "data_id": 44983,
+      "task_id": 361260,
+      "target": "SALE_PRC",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361260/Task_361260_splits.arff",
+      "name": "miami_housing",
+      "version": 2,
+      "rows": 13932,
+      "features": 15,
+      "classes": null,
+      "excluded_because": [
+        "rows=13932"
+      ]
+    },
+    {
+      "data_id": 44984,
+      "task_id": 361261,
+      "target": "wage",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361261/Task_361261_splits.arff",
+      "name": "cps88wages",
+      "version": 2,
+      "rows": 28155,
+      "features": 6,
+      "classes": null,
+      "excluded_because": [
+        "rows=28155",
+        "categorical_features=4"
+      ]
+    },
+    {
+      "data_id": 44987,
+      "task_id": 361264,
+      "target": "counts_for_sons_current_occupation",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361264/Task_361264_splits.arff",
+      "name": "socmob",
+      "version": 4,
+      "rows": 1156,
+      "features": 5,
+      "classes": null,
+      "excluded_because": [
+        "categorical_features=4"
+      ]
+    },
+    {
+      "data_id": 44989,
+      "task_id": 361266,
+      "target": "price",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361266/Task_361266_splits.arff",
+      "name": "kings_county",
+      "version": 2,
+      "rows": 21613,
+      "features": 21,
+      "classes": null,
+      "excluded_because": [
+        "rows=21613",
+        "categorical_features=4"
+      ]
+    },
+    {
+      "data_id": 44990,
+      "task_id": 361267,
+      "target": "total",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361267/Task_361267_splits.arff",
+      "name": "brazilian_houses",
+      "version": 16,
+      "rows": 10692,
+      "features": 9,
+      "classes": null,
+      "excluded_because": [
+        "rows=10692",
+        "categorical_features=4"
+      ]
+    },
+    {
+      "data_id": 44992,
+      "task_id": 361268,
+      "target": "FPS",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361268/Task_361268_splits.arff",
+      "name": "fps_benchmark",
+      "version": 2,
+      "rows": 24624,
+      "features": 43,
+      "classes": null,
+      "excluded_because": [
+        "rows=24624",
+        "categorical_features=13",
+        "missing_values=69696"
+      ]
+    },
+    {
+      "data_id": 44993,
+      "task_id": 361269,
+      "target": "whrswk",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361269/Task_361269_splits.arff",
+      "name": "health_insurance",
+      "version": 3,
+      "rows": 22272,
+      "features": 11,
+      "classes": null,
+      "excluded_because": [
+        "rows=22272",
+        "categorical_features=7"
+      ]
+    },
+    {
+      "data_id": 45012,
+      "task_id": 361272,
+      "target": "wage_eur",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361272/Task_361272_splits.arff",
+      "name": "fifa",
+      "version": 19,
+      "rows": 19178,
+      "features": 28,
+      "classes": null,
+      "excluded_because": [
+        "rows=19178",
+        "categorical_features=1"
+      ]
+    },
+    {
+      "data_id": 45402,
+      "task_id": 361623,
+      "target": "ln_votes_pop",
+      "procedure": "crossvalidation",
+      "folds": 10,
+      "repeats": 1,
+      "splits_url": "https://openml.org//api_splits/get/361623/Task_361623_splits.arff",
+      "name": "space_ga",
+      "version": 5,
+      "rows": 3107,
+      "features": 6,
+      "classes": null,
+      "excluded_because": [
+        "rows=3107"
+      ]
+    }
+  ]
+}
