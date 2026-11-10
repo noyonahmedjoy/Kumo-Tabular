@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Fit plus prediction time per fold in seconds: median [interquartile range] over all folds of all datasets. Kumo Tabular ran on an NVIDIA GTX 980M GPU (float32); all other models on an Intel Core i7-6700HQ CPU. Times are hardware-dependent and not comparable as algorithmic costs.}
+\label{tab:runtime}
+\begin{tabular}{lll}
+\toprule
+Model & Classification & Regression \\
+\midrule
+Kumo Tabular & 1.275 [0.896, 3.053] & 1.142 [0.929, 1.471] \\
+Logistic reg. & 0.027 [0.015, 0.053] & -- \\
+Linear reg. & -- & 0.004 [0.003, 0.005] \\
+Random forest & 1.392 [1.284, 1.542] & 1.077 [1.038, 1.165] \\
+Extra trees & 1.087 [1.001, 1.242] & 0.753 [0.737, 0.789] \\
+HistGB & 0.487 [0.323, 1.474] & 0.379 [0.341, 0.403] \\
+XGBoost & 0.181 [0.114, 0.283] & 0.125 [0.110, 0.152] \\
+LightGBM & 0.168 [0.094, 0.318] & 0.103 [0.092, 0.117] \\
+CatBoost & 4.564 [3.251, 5.824] & 1.728 [1.348, 2.018] \\
+\bottomrule
+\end{tabular}
+\end{table}

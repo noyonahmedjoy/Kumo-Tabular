@@ -1,0 +1,87 @@
+\documentclass[10pt]{article}
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\usepackage{tmlr}
+
+\input{math_commands.tex}
+\newcommand{\vphi}{\bm{\phi}}
+
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{adjustbox}
+
+\hypersetup{pdfauthor={Anonymous}, pdftitle={An Empirical Evaluation of a Pretrained Tabular Foundation Model on Small Numerical Tables}, pdfsubject={TMLR submission under double-blind review}, pdfkeywords={tabular data, foundation models, in-context learning, benchmarking}, pdfcreator={}, pdfproducer={}}
+
+\title{An Empirical Evaluation of a Pretrained Tabular Foundation Model on Small Numerical Tables: Kumo Tabular versus Untuned Classical Baselines}
+
+\author{\name Anonymous \email anonymous@example.com}
+
+\def\month{MM}
+\def\year{YYYY}
+\def\openreview{\url{https://openreview.net/forum?id=XXXX}}
+
+\begin{document}
+
+\maketitle
+
+{\let\thefootnote\relax\footnotetext{\textbf{Use of large language models and division of work.} \emph{Original
+study (author).} Before Claude's involvement, the author independently originated the research idea and hypothesis,
+developed the initial benchmark methodology, selected the evaluation metrics and baseline models, ran experiments on the
+two original datasets and performed an initial analysis of their results. \emph{AI-assisted work.} Claude Opus 5.5 (Anthropic), used through
+Claude Code, re-implemented the two-dataset study from the author's specification and produced the two-dataset results
+reported here (Section~\ref{sec:case}, Appendix~\ref{app:case}), adding the repeated splits, the training-size study,
+the interval evaluation and the corrected significance tests. For the OpenML benchmark, the author chose to extend the
+study with OpenML datasets and chose the additional baseline libraries from options Claude proposed; Claude designed
+the extension (dataset inclusion criteria, baseline configurations, statistical analysis plan), wrote all code, ran the
+experiments, performed and interpreted the statistical analysis and checked the references. Claude drafted and revised
+the text, tables and figures, including the conclusions, following the author's instructions. ChatGPT (OpenAI) assisted
+the author with research planning, writing task specifications and review.}}
+
+\begin{abstract}
+Tabular foundation models predict labels for new rows by conditioning on labelled rows of a new dataset, without
+training on it. We report an independent evaluation of one such model, NVIDIA Kumo Tabular (smallest
+checkpoint, default settings), against seven untuned classical models---logistic or linear regression, random forests,
+extra trees, histogram gradient boosting, XGBoost, LightGBM and CatBoost---on 21 small, fully numerical datasets from
+OpenML-CC18 and OpenML-CTR23, using the official ten-fold splits, treating datasets as the unit of inference and
+following an analysis plan written after a one-dataset pipeline check and before the other results existed. For
+classification (15 datasets), Kumo Tabular had the lowest log loss on average (rank 1.07 of 8) and was better than each
+baseline on at least 14 datasets; all seven differences remained significant after Holm's correction and in two
+sensitivity analyses, and it also ranked first on ROC-AUC, indicating that the advantage is not only one of calibration.
+Its accuracy was nevertheless below the best baseline on three datasets. For regression (six datasets), it ranked first
+on RMSE but no pairwise difference was significant, and it was clearly worse than XGBoost on one dataset. Two case
+studies show that logistic regression matched it with 25 to 100 training rows and that linear regression was
+indistinguishable from it on a nearly linear regression task. Prediction cost on our hardware was comparable to large
+random forests but well above linear models. The results support Kumo Tabular as a strong default for small numerical
+tables, within the limits of the data regime, untuned baselines and a single checkpoint.
+\end{abstract}
+
+\input{sections/intro.tex}
+\input{sections/related.tex}
+\input{sections/background.tex}
+\input{sections/design.tex}
+\input{sections/results.tex}
+\input{sections/discussion.tex}
+\input{sections/limitations.tex}
+
+\section*{Reproducibility Statement}
+The anonymized supplementary material \citep{anonymous2026supplement} contains all code, the dataset selection script and its output, raw per-fold
+and per-split results, run logs, environment records, the analysis plan and the analysis and validation scripts. The
+datasets and splits are public on OpenML; the model weights are public on Hugging Face. All 45 unit tests pass,
+including tests for data leakage and prediction shapes. The OpenML benchmark ran for about 1.5 hours on the hardware in
+Appendix~\ref{app:software}.
+
+\section*{Broader Impact Statement}
+This is a benchmark study of an existing, publicly released model on public datasets. We do not foresee a significant
+risk of harm. Two case-study datasets are medical; they are used only as benchmarks, and our results must not be read
+as evidence about clinical use.
+
+\bibliography{references}
+\bibliographystyle{tmlr}
+
+\input{sections/appendix.tex}
+
+\end{document}

@@ -1,0 +1,36 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\paragraph{What the evidence establishes.}
+On 15 small, fully numerical classification datasets, the \texttt{small} Kumo Tabular checkpoint with default settings
+produced better probabilistic predictions than each of seven untuned classical models, consistently across datasets,
+with differences that survive multiplicity correction and both sensitivity analyses (RQ1, RQ2). The advantage also
+appears in ROC-AUC, so it is not explained by calibration alone. On six regression datasets it ranked first on average,
+but the evidence is too limited for a statistical claim.
+
+\paragraph{Where it does not help.}
+The aggregate hides dataset-level exceptions (RQ3). Kumo Tabular's accuracy was below the best baseline on three of 15
+classification datasets, and its RMSE was 44\% higher than XGBoost's on \texttt{energy\_efficiency}. In the case
+studies, logistic regression matched it for classification with 25 to 100 training rows, and on the diabetes data
+linear regression was statistically indistinguishable from it. The largest accuracy gains occurred on two multiclass
+datasets (\texttt{vehicle}, \texttt{balance-scale}); on several binary tasks the differences in accuracy were a fraction
+of a percentage point.
+
+\paragraph{Interpreting the comparison.}
+The baselines were not tuned, whereas Kumo Tabular's defaults result from extensive pretraining. Our comparison
+therefore answers a practical question---what a practitioner obtains without model selection on small numerical
+tables---and not which model class is better when each is tuned. Regularized or tuned gradient boosting, and a strong
+linear model for nearly linear targets, remain relevant alternatives.
+
+\paragraph{Cost.}
+Prediction with Kumo Tabular processes the full context at every call. On our hardware its time per fold was comparable
+to large random forests and smaller than CatBoost's, but well above linear models, XGBoost and LightGBM, and it requires
+a GPU for reasonable speed (RQ4).
+
+\section{Conclusion}
+\label{sec:conclusion}
+In an independent evaluation on 21 small numerical OpenML datasets, the smallest Kumo Tabular checkpoint
+outperformed seven untuned classical baselines on classification log loss on nearly every dataset, and ranked first on
+average for regression without statistical support. The results justify Kumo Tabular as a strong default for small
+numerical tables, while the dataset-level exceptions, the restricted data regime and the untuned baselines limit how
+far the conclusion extends.

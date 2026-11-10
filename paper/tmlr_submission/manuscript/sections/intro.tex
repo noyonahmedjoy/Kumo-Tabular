@@ -1,0 +1,35 @@
+\section{Introduction}
+\label{sec:intro}
+
+Tree ensembles and regularized linear models have long been the practical default for tabular data, and extensive
+comparisons found gradient-boosted trees competitive with or better than deep networks on typical medium-sized tables
+\citep{shwartzziv2022tabular,grinsztajn2022tree,borisov2024survey}. Tabular foundation models take a different
+approach: a transformer is pretrained once, mostly on synthetic tables, and then predicts the labels of new rows by
+conditioning on the labelled rows of a new dataset, without any training on it
+\citep{hollmann2023tabpfn,hollmann2025tabpfn,qu2025tabicl}. NVIDIA Kumo Tabular \citep{nvidia_kumo_card,nvidia_kumo_blog}
+is a recently released model of this kind. Its developers report leading results on public benchmark suites, but we know
+of no independent evaluation.
+
+This paper reports an empirical evaluation of Kumo Tabular on small, fully numerical tables that is independent of
+the model's developers. It does not propose a new method. We ask:
+\begin{enumerate}
+\item[\textbf{RQ1}] How does Kumo Tabular, used with default settings, compare with seven untuned classical models in
+predictive quality across an externally defined set of small datasets?
+\item[\textbf{RQ2}] Is any difference consistent across datasets, robust to dependence between related datasets, and
+present in ranking quality rather than only in probability calibration?
+\item[\textbf{RQ3}] Where does Kumo Tabular fail to outperform the classical models?
+\item[\textbf{RQ4}] What does it cost in runtime on modest hardware?
+\end{enumerate}
+
+Our contributions are:
+\begin{itemize}
+\item A benchmark of Kumo Tabular against logistic or linear regression, random forests, extra trees, histogram
+gradient boosting, XGBoost, LightGBM and CatBoost on 21 OpenML datasets selected by fixed criteria, using the official
+OpenML splits (Section~\ref{sec:design}).
+\item A planned analysis with datasets as the unit of inference, a single primary metric per task, Holm-corrected
+pairwise tests, effect sizes and two sensitivity analyses, with the statistics recomputed by a second, separately written
+implementation (Section~\ref{sec:results}).
+\item Two detailed case studies, including a training-size study and an evaluation of predictive intervals, which
+illustrate how dataset-level conclusions can differ from the aggregate picture (Section~\ref{sec:case}).
+\item Code, raw per-fold results, logs and analysis scripts as anonymized supplementary material.
+\end{itemize}

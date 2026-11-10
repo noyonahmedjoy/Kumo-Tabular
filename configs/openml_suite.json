@@ -1822,5 +1822,14 @@
         "rows=3107"
       ]
     }
+  ],
+  "excluded_at_load": [
+    {
+      "data_id": 44962,
+      "name": "forest_fires",
+      "task": "regression",
+      "reason": "OpenML metadata reports 0 symbolic features, but the data contain text columns 'month' and 'day'; excluded by the selection criterion 'numerical features only' in the analysis plan",
+      "date": "2026-11-09"
+    }
   ]
 }

@@ -1,0 +1,57 @@
+\appendix
+
+\section{Per-Dataset Results of the Main Benchmark}
+\label{app:perdataset}
+
+Tables~\ref{tab:perdataset_classification} and~\ref{tab:perdataset_regression} give the primary metric for every model
+and dataset (mean over 10 folds). All per-fold results, including the secondary metrics and timings, are in the
+supplementary material.
+
+\input{tables/per_dataset_classification.tex}
+
+\input{tables/per_dataset_regression.tex}
+
+\section{Case Studies: Breast Cancer and Diabetes}
+\label{app:case}
+
+The case studies use five stratified (classification) or random (regression) 80/20 splits with seeds 42--46, logistic
+or linear regression, random forests (500 trees) and histogram gradient boosting with defaults, and Kumo Tabular with
+the same settings as the main benchmark. Malignant tumours are the positive class. Tables~\ref{tab:classification}
+and~\ref{tab:regression} report means and standard deviations over the splits; Table~\ref{tab:paired} the
+within-dataset paired comparison with the strongest baseline; Tables~\ref{tab:study_classification}
+and~\ref{tab:study_regression} the training-size study (seeds 42--44); and Figure~\ref{fig:case} the training-size
+curves and Kumo Tabular's quantile intervals. Because five resampled splits are dependent, these analyses are
+descriptive; no within-dataset difference is significant after the overlap correction and Holm's adjustment. A
+complete re-run of the same code reproduced all metrics exactly, and execution of the same notebooks in a separate
+cloud environment (NVIDIA T4, PyTorch 2.11,
+float16) reproduced the results of Kumo Tabular, logistic/linear regression and random forests at the reported
+precision; histogram gradient boosting differed slightly there (for example, accuracy 0.960 instead of 0.967).
+
+\input{tables/original_table_classification.tex}
+
+\input{tables/original_table_regression.tex}
+
+\input{tables/original_table_paired.tex}
+
+\input{tables/original_table_study_classification.tex}
+
+\input{tables/original_table_study_regression.tex}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.32\textwidth]{figures/original_classification_sample_size_accuracy.png}\hfill
+\includegraphics[width=0.32\textwidth]{figures/original_regression_sample_size_r2.png}\hfill
+\includegraphics[width=0.32\textwidth]{figures/original_regression_kumo_intervals.png}
+\caption{Case studies: classification accuracy and regression $R^2$ by number of training rows (mean $\pm$ one standard
+deviation over three seeds; logarithmic horizontal axis), and Kumo Tabular's median prediction with its nominal 90\%
+interval on one diabetes split (coverage 93.3\% on that split).}
+\label{fig:case}
+\end{figure}
+
+\section{Software and Hardware}
+\label{app:software}
+
+Python 3.12.16, PyTorch 2.14.1 \citep{paszke2019pytorch} (CUDA 12.6), structured-data-models 0.2.1, scikit-learn 1.9.1, XGBoost 3.4.1, LightGBM
+4.7.0, CatBoost 1.2.10, NumPy 2.5.4, pandas 3.1.0; NVIDIA GeForce GTX 980M (8\,GB, compute capability 5.2), Intel Core
+i7-6700HQ, 16\,GB RAM, Windows 10. Kumo Tabular weights: Hugging Face repository \texttt{nvidia/Kumo-Tabular}, revision
+\texttt{v1.0.1}, \texttt{small} checkpoints.

@@ -49,3 +49,6 @@ paper/final_submission/latex_source/t1*
 .git-backup/
 
 .tools/
+
+results/openml_benchmark/console_output*.txt
+paper/tmlr_submission/manuscript/*.bbl

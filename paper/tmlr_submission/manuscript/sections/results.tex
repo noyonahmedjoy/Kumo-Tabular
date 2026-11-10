@@ -1,0 +1,97 @@
+\section{Results}
+\label{sec:results}
+
+All 1{,}680 model runs (21 datasets $\times$ 10 folds $\times$ 8 models) completed without failure. The analyses below
+follow the written analysis plan (Section~\ref{sec:design}); the statistics were recomputed from the raw per-fold results by a second, separately written
+implementation (exact Wilcoxon enumeration, hand-coded Friedman and Holm procedures) with identical results. Both
+implementations were written with the same AI assistant (see the note on page 1), so this check guards against
+coding errors, not against a shared misunderstanding.
+
+\subsection{Classification}
+On the primary metric, log loss, Kumo Tabular had the best average rank among the eight models (1.07; Friedman
+$p<0.001$; Table~\ref{tab:ranks}, Figure~\ref{fig:ranks}). It had a lower log loss than CatBoost, random forests,
+extra trees, histogram gradient boosting, XGBoost and LightGBM on all 15 datasets, and than logistic regression on 14 of
+15 (Table~\ref{tab:comparison}). All seven differences remain significant after Holm's correction (adjusted $p<0.001$).
+The median relative reduction in log loss ranged from 12.8\% against CatBoost to 54.5\% against extra trees. Against the
+strongest baseline on each individual dataset, Kumo Tabular had the lower log loss on 14 of 15 datasets; on
+\texttt{climate-model-simulation-crashes} logistic regression was marginally better (0.1311 versus 0.1313;
+Figure~\ref{fig:perdataset}).
+
+Because log loss rewards calibrated probabilities, and tree ensembles are often poorly calibrated, a log-loss advantage
+could reflect calibration alone. The secondary metrics speak against this explanation. Kumo Tabular also had the best
+average rank for one-vs-rest ROC-AUC (1.33), which depends only on the ordering of predictions, and for accuracy (1.77)
+and macro-F1 (2.20). These secondary comparisons are descriptive, but each of the seven pairwise comparisons on each
+secondary metric favoured Kumo Tabular on at least 11 of 15 datasets. Its advantage in accuracy is not uniform: relative
+to the best baseline on each dataset it was lower on \texttt{diabetes} ($-1.8$ percentage points),
+\texttt{climate-model-simulation-crashes} ($-1.1$) and \texttt{kc2} ($-0.2$), equal on \texttt{pc3}, and largest on
+\texttt{vehicle} ($+11.5$) and \texttt{balance-scale} ($+10.4$).
+
+\input{tables/comparison.tex}
+
+\input{tables/ranks.tex}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/average_ranks.pdf}
+\caption{Average rank of each model on the primary metric across datasets (1 = best). Kumo Tabular in blue.}
+\label{fig:ranks}
+\end{figure}
+
+\subsection{Regression}
+On RMSE, Kumo Tabular had the best average rank (1.67; Friedman $p<0.001$), followed by CatBoost (2.67) and extra
+trees (3.50); ordinary least squares ranked last on every dataset. Kumo Tabular had a lower RMSE than histogram gradient
+boosting, LightGBM and least squares on all six datasets and than the other four baselines on five of six. None of these
+differences is significant after Holm's correction (smallest adjusted $p=0.22$), as anticipated by the design: with six
+datasets these comparisons cannot reach significance, and we treat them as descriptive. Relative to the best baseline on
+each dataset, Kumo Tabular had a lower RMSE on four of six datasets, with the largest reduction on
+\texttt{airfoil\_self\_noise} (44\%). It was clearly worse on \texttt{energy\_efficiency}, where its RMSE was 44\% higher
+than XGBoost's, and slightly worse on \texttt{red\_wine} (5\% higher than extra trees). The secondary metrics MAE and
+$R^2$ gave the same ordering of Kumo Tabular first (average ranks 1.33 and 1.67).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/per_dataset_primary_metric.pdf}
+\caption{Per-dataset difference between Kumo Tabular and the best of the seven baselines on that dataset, as a
+percentage of the baseline's loss (log loss for classification, RMSE for regression). Positive values favour Kumo
+Tabular. Comparing against the per-dataset best baseline is stricter than any single fixed baseline.}
+\label{fig:perdataset}
+\end{figure}
+
+\subsection{Sensitivity analyses}
+The classification conclusions did not change in either planned sensitivity analysis (Table~\ref{tab:sensitivity}).
+Without \texttt{wdbc}, Kumo Tabular's average rank was 1.07 and it was significantly better than all seven baselines
+after Holm's correction; with related datasets averaged into single units (11 units), its average rank was 1.09 and all
+seven comparisons remained significant (adjusted $p=0.007$). The regression results were unchanged because no
+regression dataset was affected.
+
+\input{tables/sensitivity.tex}
+
+\subsection{Runtime}
+Table~\ref{tab:runtime} and Figure~\ref{fig:runtime} report fit-plus-prediction time per fold. On this hardware the
+median time per fold of Kumo Tabular on the GPU (1.27\,s for classification, 1.14\,s for regression) was comparable to
+500-tree random forests and extra trees on the CPU and lower than CatBoost with its default 1{,}000 iterations. It was
+about 7 (classification) and 9 to 11 (regression) times the median time of XGBoost and LightGBM, and about 48 times
+that of logistic regression and 300 times that of least squares. The time per fold depended strongly on
+the dataset: on the 10-class \texttt{mfeat-zernike} dataset the ten folds took 1{,}113\,s for histogram gradient
+boosting, 841\,s for CatBoost and 650\,s for Kumo Tabular, against 21\,s or less for XGBoost, LightGBM, extra trees and
+logistic regression. These measurements are hardware-specific (Section~\ref{sec:limitations}).
+
+\input{tables/runtime.tex}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/runtime.pdf}
+\caption{Fit plus prediction time per fold (log scale) over all folds of all datasets. Kumo Tabular ran on a GPU, the
+other models on a CPU.}
+\label{fig:runtime}
+\end{figure}
+
+\subsection{Case studies}
+\label{sec:case}
+The two-dataset case studies (Appendix~\ref{app:case}) are consistent with the benchmark but add detail. On breast
+cancer data Kumo Tabular had the best mean on every threshold metric (accuracy 0.989 versus 0.977 for logistic
+regression) and higher accuracy than logistic regression on all five splits, but after the overlap correction and Holm's
+adjustment no within-dataset comparison was significant (smallest adjusted $p=0.081$). On diabetes data it was
+indistinguishable from linear regression ($R^2$ 0.503 versus 0.496). In the training-size study it was much more robust
+than least squares with 25 training rows ($R^2$ 0.429 versus 0.075) but no better than logistic regression for
+classification at 25 to 100 rows. Its nominal 90\% quantile interval covered 93.3\% of diabetes test targets.

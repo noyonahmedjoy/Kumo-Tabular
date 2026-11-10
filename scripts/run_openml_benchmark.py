@@ -60,7 +60,11 @@ def main() -> None:
             log(f"skip {entry['name']} (already complete)")
             continue
         start = time.perf_counter()
-        task = load_openml_task(entry)
+        try:
+            task = load_openml_task(entry)
+        except ValueError as error:
+            log(f"NOT RUN {entry['name']}: data could not be loaded as specified ({error})")
+            continue
         results = run_task(task, kumo_by_task, config["kumo"]["regression_point_quantile"])
         results.to_csv(path, index=False)
         failed = results[results["status"] != "ok"]

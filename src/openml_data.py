@@ -27,7 +27,9 @@ class OpenMLTask:
 
 def load_suite(path: Path = SUITE_PATH) -> list[dict]:
     suite = json.loads(path.read_text(encoding="utf-8"))
-    return [{**entry, "task": task} for task in ("classification", "regression") for entry in suite[task]]
+    excluded = {item["data_id"] for item in suite.get("excluded_at_load", [])}
+    return [{**entry, "task": task} for task in ("classification", "regression") for entry in suite[task]
+            if entry["data_id"] not in excluded]
 
 
 def parse_splits(arff_text: str, repeat: int = 0) -> list[tuple[np.ndarray, np.ndarray]]:

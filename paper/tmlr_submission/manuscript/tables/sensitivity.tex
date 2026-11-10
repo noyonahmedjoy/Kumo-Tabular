@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Planned sensitivity analyses on the primary metric: Kumo Tabular's average rank, the number of baselines it beats with Holm-adjusted $p<0.05$, and its W/T/L against the strongest baseline (lowest average rank).}
+\label{tab:sensitivity}
+\begin{tabular}{llcccc}
+\toprule
+Task & Analysis & $n$ & Kumo avg.\ rank & Sig.\ wins (of 7) & W/T/L vs strongest \\
+\midrule
+Classification & All datasets & 15 & 1.07 & 7 & 15/0/0 (CatBoost) \\
+ & Excluding wdbc & 14 & 1.07 & 7 & 14/0/0 (CatBoost) \\
+ & Families collapsed & 11 & 1.09 & 7 & 11/0/0 (CatBoost) \\
+\midrule
+Regression & All datasets & 6 & 1.67 & 0 & 5/0/1 (CatBoost) \\
+ & Excluding wdbc & 6 & 1.67 & 0 & 5/0/1 (CatBoost) \\
+ & Families collapsed & 6 & 1.67 & 0 & 5/0/1 (CatBoost) \\
+\bottomrule
+\end{tabular}
+\end{table}

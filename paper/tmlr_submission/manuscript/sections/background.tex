@@ -1,0 +1,33 @@
+\section{Background: Training Versus In-Context Learning}
+\label{sec:background}
+
+Let $\gD_{\mathrm{tr}}=\{(\vx_i,y_i)\}_{i=1}^{n}$ be a labelled training set and $\vx_q$ a query row. A classical
+model fits parameters to each dataset,
+\begin{equation}
+\hat{\vtheta}=\arg\min_{\vtheta}\;\frac{1}{n}\sum_{i=1}^{n}\ell\big(f_{\vtheta}(\vx_i),y_i\big)+\lambda\,\Omega(\vtheta),
+\label{eq:erm}
+\end{equation}
+and predicts $\hat{y}_q=f_{\hat{\vtheta}}(\vx_q)$. A tabular foundation model instead has parameters $\vphi$ fitted
+once, before the target dataset is seen, by minimizing the expected predictive loss over datasets drawn from a
+generator,
+\begin{equation}
+\vphi^{\star}=\arg\min_{\vphi}\;\mathbb{E}_{\gD\sim p(\gD)}\Big[-\log q_{\vphi}\big(y_q\mid\vx_q,\gD_{\mathrm{ctx}}\big)\Big],
+\label{eq:pfn}
+\end{equation}
+so that $q_{\vphi}$ approximates the posterior predictive distribution implied by the generator \citep{muller2022pfn}.
+On a new dataset, $\vphi^{\star}$ is frozen and the training set is supplied as context:
+$\hat{p}(y_q\mid\vx_q)=q_{\vphi^{\star}}(y_q\mid\vx_q,\gD_{\mathrm{tr}})$. No gradient step is taken on the target
+data; every prediction call processes the context again unless context representations are cached.
+
+\paragraph{Kumo Tabular as used here.}
+From the developers' description \citep{nvidia_kumo_blog} and the source code of \texttt{structured-data-models}
+0.2.1 \citep{nvidia_sdm}: cell values are embedded with learned Fourier features; a row encoder alternates column-wise
+induced self-attention (each row attends only to context rows) with row-wise attention and summarizes each row with
+four readout tokens; a final transformer performs in-context learning, with query rows attending to context rows only.
+The classification head supports up to ten classes and is wrapped in an error-correcting output code scheme
+\citep{dietterich1995ecoc}; the regression head outputs 999 quantiles \citep{koenker1978quantiles}. A built-in recipe
+forms an ensemble of $E$ preprocessed views (standardization followed by one of four transformations, column shuffling
+and, for classification, cyclic label shifts); class scores are averaged and normalized with a softmax, and regression
+quantiles are combined with a 20\% trimmed mean. We use the \texttt{small} checkpoints (27.5M parameters for
+classification and 28.5M for regression, counted from the loaded models) with $E=8$ and the median quantile as the
+regression point prediction.

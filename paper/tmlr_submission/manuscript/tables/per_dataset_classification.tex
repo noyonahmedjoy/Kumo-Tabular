@@ -1,0 +1,31 @@
+\begin{table}[h]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\caption{Per-dataset log loss (classification), mean over 10 folds. Best value per dataset in bold.}
+\label{tab:perdataset_classification}
+\smallskip
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Dataset & Kumo Tabular & Logistic reg. & Random forest & Extra trees & HistGB & XGBoost & LightGBM & CatBoost \\
+\midrule
+balance-scale & \textbf{0.024} & 0.278 & 0.535 & 2.853 & 0.407 & 0.319 & 0.331 & 0.255 \\
+banknote-authentication & \textbf{0.000} & 0.048 & 0.027 & 0.014 & 0.015 & 0.015 & 0.023 & 0.008 \\
+blood-transfusion-service-center & \textbf{0.468} & 0.477 & 0.782 & 2.490 & 0.579 & 0.609 & 0.559 & 0.490 \\
+climate-model-simulation-crashes & 0.131 & \textbf{0.131} & 0.190 & 0.183 & 0.182 & 0.149 & 0.198 & 0.140 \\
+diabetes & \textbf{0.466} & 0.485 & 0.480 & 0.483 & 0.632 & 0.721 & 0.628 & 0.480 \\
+kc2 & \textbf{0.374} & 0.386 & 0.754 & 0.821 & 0.515 & 0.531 & 0.526 & 0.384 \\
+mfeat-morphological & \textbf{0.559} & 0.643 & 0.944 & 4.116 & 1.143 & 0.887 & 1.126 & 0.648 \\
+mfeat-zernike & \textbf{0.213} & 0.374 & 0.687 & 3.743 & 0.967 & 0.724 & 0.938 & 0.541 \\
+pc1 & \textbf{0.160} & 0.227 & 0.181 & 0.545 & 0.297 & 0.240 & 0.315 & 0.180 \\
+pc3 & \textbf{0.236} & 0.283 & 0.265 & 0.332 & 0.357 & 0.353 & 0.355 & 0.258 \\
+pc4 & \textbf{0.157} & 0.229 & 0.197 & 0.224 & 0.236 & 0.223 & 0.226 & 0.180 \\
+qsar-biodeg & \textbf{0.284} & 0.334 & 0.341 & 0.368 & 0.381 & 0.376 & 0.409 & 0.305 \\
+steel-plates-fault & \textbf{0.383} & 0.773 & 0.577 & 0.573 & 0.669 & 0.568 & 0.647 & 0.506 \\
+vehicle & \textbf{0.199} & 0.472 & 0.498 & 0.517 & 0.697 & 0.579 & 0.613 & 0.475 \\
+wdbc & \textbf{0.062} & 0.078 & 0.112 & 0.108 & 0.110 & 0.091 & 0.119 & 0.082 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

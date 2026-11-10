@@ -1,0 +1,46 @@
+\section{Limitations and Threats to Validity}
+\label{sec:limitations}
+
+\paragraph{Scope of the datasets.}
+All datasets are small (at most 2{,}000 rows), fully numerical and complete. Our conclusions do not extend to larger
+tables, categorical or text features, or missing values---settings that tabular foundation models are designed to
+handle and in which their relative performance may differ. The datasets come from two curated suites; curation and the
+selection filters shape which problems are represented. The filters relied on OpenML metadata, which was wrong for
+\texttt{forest\_fires}: it was excluded at load time because of undeclared text columns, after results for 17 other
+datasets existed. The exclusion follows the selection criterion and did not depend on any result, but it reduced the
+regression suite from seven to six datasets, and we did not evaluate the dataset with its text columns encoded or
+removed. Six regression datasets support descriptive conclusions only.
+
+\paragraph{Dependence between datasets.}
+Some datasets share a source (four NASA software-defect datasets; two \texttt{mfeat} feature sets of the same digits),
+which violates the independence assumed by the Friedman and Wilcoxon tests. The planned family-collapsed analysis
+addresses this only partly.
+
+\paragraph{Untuned baselines and a single checkpoint.}
+No model was tuned. Tuned gradient boosting or regularized linear models could narrow or reverse differences, and
+library defaults are not designed for very small data. Only the \texttt{small} Kumo Tabular checkpoint was evaluated,
+with float32 inference on an older GPU; the developers' claims concern larger checkpoints as well.
+
+\paragraph{Pretraining overlap.}
+The developers state that Kumo Tabular was pretrained on synthetic data only \citep{nvidia_kumo_blog}. We cannot verify
+this; if any benchmark dataset or close variant was seen in pretraining, Kumo Tabular's performance on it would be
+overstated.
+
+\paragraph{Statistical power and multiplicity.}
+With 15 classification datasets the cross-dataset tests can detect only consistent differences; absence of
+significance is not evidence of equivalence. Secondary metrics and sensitivity analyses are not adjusted for
+multiplicity and are descriptive. Within-dataset comparisons in the case studies rest on five dependent splits.
+
+\paragraph{Timing of the analysis plan.}
+The analysis plan was written after the complete results on \texttt{wdbc} had been seen, on which Kumo Tabular was best
+on all quality metrics, and it is timestamped only in a local repository. Choices made in the plan, such as the
+primary metrics, could in principle have been influenced by that one dataset. The analysis without \texttt{wdbc}
+gives the same conclusions (Table~\ref{tab:sensitivity}), and the secondary metrics are reported in full.
+
+\paragraph{Runtime.}
+Runtimes come from one laptop with a GPU for Kumo Tabular and a CPU for all other models, and timings of a few
+milliseconds vary between runs. They indicate orders of magnitude on this hardware, not algorithmic costs.
+
+\paragraph{Construct validity.}
+Accuracy and macro-F1 use the arg-max decision rule; in applications the decision threshold would be chosen for a
+target cost. The medical case-study datasets are used as benchmarks only; no conclusion about clinical use is drawn.

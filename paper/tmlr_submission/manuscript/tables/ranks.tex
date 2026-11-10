@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Average rank of each model per metric (1 = best) and Friedman test $p$-value. Primary metrics in the first column of each task; the others are descriptive.}
+\label{tab:ranks}
+\begin{tabular}{lcccc|ccc}
+\toprule
+& \multicolumn{4}{c|}{Classification ($n=15$)} & \multicolumn{3}{c}{Regression ($n=6$)} \\
+Model & log loss & accuracy & ROC-AUC & macro-F1 & RMSE & MAE & $R^2$ \\
+\midrule
+Kumo Tabular & 1.07 & 1.77 & 1.33 & 2.20 & 1.67 & 1.33 & 1.67 \\
+Logistic reg. & 3.73 & 3.93 & 4.40 & 4.80 & -- & -- & -- \\
+Linear reg. & -- & -- & -- & -- & 8.00 & 8.00 & 8.00 \\
+Random forest & 5.00 & 6.20 & 5.27 & 6.07 & 4.33 & 4.67 & 4.33 \\
+Extra trees & 6.00 & 5.27 & 5.60 & 5.80 & 3.50 & 3.17 & 3.50 \\
+HistGB & 6.33 & 5.23 & 5.40 & 4.60 & 5.33 & 5.67 & 5.50 \\
+XGBoost & 5.07 & 4.60 & 5.13 & 3.73 & 4.17 & 3.67 & 4.33 \\
+LightGBM & 6.33 & 5.23 & 5.93 & 4.60 & 6.33 & 6.67 & 6.17 \\
+CatBoost & 2.47 & 3.77 & 2.93 & 4.20 & 2.67 & 2.83 & 2.50 \\
+\midrule
+Friedman $p$ & $<$0.001 & $<$0.001 & $<$0.001 & $<$0.001 & $<$0.001 & $<$0.001 & $<$0.001 \\
+\bottomrule
+\end{tabular}
+\end{table}

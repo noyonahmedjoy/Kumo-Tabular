@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Classification accuracy by training-set size (mean $\pm$ standard deviation over three seeds; full test split).}
+\label{tab:study_classification}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{rcccc}
+\toprule
+$n$ & Kumo Tabular & Logistic Reg. & Random Forest & HistGB \\
+\midrule
+25 & 0.950\,{\scriptsize$\pm$0.027} & \textbf{0.956}\,{\scriptsize$\pm$0.023} & 0.930\,{\scriptsize$\pm$0.018} & 0.632\,{\scriptsize$\pm$0.000} \\
+50 & \textbf{0.953}\,{\scriptsize$\pm$0.051} & \textbf{0.953}\,{\scriptsize$\pm$0.022} & 0.933\,{\scriptsize$\pm$0.044} & 0.909\,{\scriptsize$\pm$0.035} \\
+100 & \textbf{0.956}\,{\scriptsize$\pm$0.040} & \textbf{0.956}\,{\scriptsize$\pm$0.026} & 0.939\,{\scriptsize$\pm$0.015} & 0.944\,{\scriptsize$\pm$0.051} \\
+200 & \textbf{0.985}\,{\scriptsize$\pm$0.013} & 0.971\,{\scriptsize$\pm$0.013} & 0.947\,{\scriptsize$\pm$0.009} & 0.947\,{\scriptsize$\pm$0.009} \\
+400 & \textbf{0.982}\,{\scriptsize$\pm$0.015} & 0.974\,{\scriptsize$\pm$0.015} & 0.953\,{\scriptsize$\pm$0.018} & 0.956\,{\scriptsize$\pm$0.009} \\
+455 & \textbf{0.988}\,{\scriptsize$\pm$0.013} & 0.974\,{\scriptsize$\pm$0.015} & 0.959\,{\scriptsize$\pm$0.013} & 0.959\,{\scriptsize$\pm$0.010} \\
+\bottomrule
+\end{tabular}
+\end{table}

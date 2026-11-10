@@ -1,0 +1,2056 @@
+{
+  "classification": {
+    "all": {
+      "log_loss": {
+        "datasets": 15,
+        "average_rank": {
+          "Kumo Tabular": 1.067,
+          "CatBoost": 2.467,
+          "Logistic Regression": 3.733,
+          "Random Forest": 5.0,
+          "XGBoost": 5.067,
+          "Extra Trees": 6.0,
+          "HistGradientBoosting": 6.333,
+          "LightGBM": 6.333
+        },
+        "friedman_statistic": 65.13333333333333,
+        "friedman_p": 1.4138387205431504e-11,
+        "kumo_vs_baselines": [
+          {
+            "baseline": "CatBoost",
+            "datasets": 15,
+            "kumo_wins": 15,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.021587846562244994,
+            "median_relative_advantage": 0.1279016048804984,
+            "wilcoxon_p": 6.103515625e-05,
+            "holm_p": 0.00042724609375
+          },
+          {
+            "baseline": "Extra Trees",
+            "datasets": 15,
+            "kumo_wins": 15,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.18937683802676553,
+            "median_relative_advantage": 0.5445912697244112,
+            "wilcoxon_p": 6.103515625e-05,
+            "holm_p": 0.00042724609375
+          },
+          {
+            "baseline": "HistGradientBoosting",
+            "datasets": 15,
+            "kumo_wins": 15,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.13735528659306245,
+            "median_relative_advantage": 0.42761701351628245,
+            "wilcoxon_p": 6.103515625e-05,
+            "holm_p": 0.00042724609375
+          },
+          {
+            "baseline": "LightGBM",
+            "datasets": 15,
+            "kumo_wins": 15,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.15228220839670548,
+            "median_relative_advantage": 0.40758620226756304,
+            "wilcoxon_p": 6.103515625e-05,
+            "holm_p": 0.00042724609375
+          },
+          {
+            "baseline": "Logistic Regression",
+            "datasets": 15,
+            "kumo_wins": 14,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.04990287475898181,
+            "median_relative_advantage": 0.2053348764061832,
+            "wilcoxon_p": 0.0001220703125,
+            "holm_p": 0.00042724609375
+          },
+          {
+            "baseline": "Random Forest",
+            "datasets": 15,
+            "kumo_wins": 15,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.058386026282096354,
+            "median_relative_advantage": 0.40183252023739635,
+            "wilcoxon_p": 6.103515625e-05,
+            "holm_p": 0.00042724609375
+          },
+          {
+            "baseline": "XGBoost",
+            "datasets": 15,
+            "kumo_wins": 15,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.14110917871111045,
+            "median_relative_advantage": 0.32952460281794216,
+            "wilcoxon_p": 6.103515625e-05,
+            "holm_p": 0.00042724609375
+          }
+        ]
+      },
+      "accuracy": {
+        "datasets": 15,
+        "average_rank": {
+          "Kumo Tabular": 1.767,
+          "CatBoost": 3.767,
+          "Logistic Regression": 3.933,
+          "XGBoost": 4.6,
+          "LightGBM": 5.233,
+          "HistGradientBoosting": 5.233,
+          "Extra Trees": 5.267,
+          "Random Forest": 6.2
+        },
+        "friedman_statistic": 32.43929712460066,
+        "friedman_p": 3.3664288740845905e-05,
+        "kumo_vs_baselines": [
+          {
+            "baseline": "CatBoost",
+            "datasets": 15,
+            "kumo_wins": 13,
+            "ties": 1,
+            "kumo_losses": 1,
+            "median_advantage": 0.008803258145363424,
+            "median_relative_advantage": 0.009340110343628985,
+            "wilcoxon_p": 0.0040283203125,
+            "holm_p": 0.008056640625
+          },
+          {
+            "baseline": "Extra Trees",
+            "datasets": 15,
+            "kumo_wins": 14,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.017380261248185702,
+            "median_relative_advantage": 0.02105031861129413,
+            "wilcoxon_p": 0.0001220703125,
+            "holm_p": 0.0008544921875
+          },
+          {
+            "baseline": "HistGradientBoosting",
+            "datasets": 15,
+            "kumo_wins": 14,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.012312030075188107,
+            "median_relative_advantage": 0.013831511195307324,
+            "wilcoxon_p": 0.0001220703125,
+            "holm_p": 0.0008544921875
+          },
+          {
+            "baseline": "LightGBM",
+            "datasets": 15,
+            "kumo_wins": 13,
+            "ties": 0,
+            "kumo_losses": 2,
+            "median_advantage": 0.012142740486689618,
+            "median_relative_advantage": 0.013604819784171114,
+            "wilcoxon_p": 0.00030517578125,
+            "holm_p": 0.00152587890625
+          },
+          {
+            "baseline": "Logistic Regression",
+            "datasets": 15,
+            "kumo_wins": 12,
+            "ties": 0,
+            "kumo_losses": 3,
+            "median_advantage": 0.014258760107816792,
+            "median_relative_advantage": 0.018944519621109625,
+            "wilcoxon_p": 0.0067138671875,
+            "holm_p": 0.008056640625
+          },
+          {
+            "baseline": "Random Forest",
+            "datasets": 15,
+            "kumo_wins": 14,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.022222222222222143,
+            "median_relative_advantage": 0.023999999999999914,
+            "wilcoxon_p": 0.0006103515625,
+            "holm_p": 0.0018310546875
+          },
+          {
+            "baseline": "XGBoost",
+            "datasets": 15,
+            "kumo_wins": 13,
+            "ties": 0,
+            "kumo_losses": 2,
+            "median_advantage": 0.012312030075188107,
+            "median_relative_advantage": 0.012690929053508717,
+            "wilcoxon_p": 0.00030517578125,
+            "holm_p": 0.00152587890625
+          }
+        ]
+      },
+      "roc_auc": {
+        "datasets": 15,
+        "average_rank": {
+          "Kumo Tabular": 1.333,
+          "CatBoost": 2.933,
+          "Logistic Regression": 4.4,
+          "XGBoost": 5.133,
+          "Random Forest": 5.267,
+          "HistGradientBoosting": 5.4,
+          "Extra Trees": 5.6,
+          "LightGBM": 5.933
+        },
+        "friedman_statistic": 44.02866242038219,
+        "friedman_p": 2.1099564480134116e-07,
+        "kumo_vs_baselines": [
+          {
+            "baseline": "CatBoost",
+            "datasets": 15,
+            "kumo_wins": 13,
+            "ties": 1,
+            "kumo_losses": 1,
+            "median_advantage": 0.013083976958367494,
+            "median_relative_advantage": 0.013529288285964954,
+            "wilcoxon_p": 0.000244140625,
+            "holm_p": 0.000732421875
+          },
+          {
+            "baseline": "Extra Trees",
+            "datasets": 15,
+            "kumo_wins": 13,
+            "ties": 1,
+            "kumo_losses": 1,
+            "median_advantage": 0.02204605800653603,
+            "median_relative_advantage": 0.023390181270518978,
+            "wilcoxon_p": 0.0003662109375,
+            "holm_p": 0.000732421875
+          },
+          {
+            "baseline": "HistGradientBoosting",
+            "datasets": 15,
+            "kumo_wins": 15,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.01999846813725481,
+            "median_relative_advantage": 0.021171758015428012,
+            "wilcoxon_p": 6.103515625e-05,
+            "holm_p": 0.00042724609375
+          },
+          {
+            "baseline": "LightGBM",
+            "datasets": 15,
+            "kumo_wins": 15,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.01976111111111123,
+            "median_relative_advantage": 0.020466995028539988,
+            "wilcoxon_p": 6.103515625e-05,
+            "holm_p": 0.00042724609375
+          },
+          {
+            "baseline": "Logistic Regression",
+            "datasets": 15,
+            "kumo_wins": 14,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.009814814814814832,
+            "median_relative_advantage": 0.012101896293366414,
+            "wilcoxon_p": 0.00018310546875,
+            "holm_p": 0.000732421875
+          },
+          {
+            "baseline": "Random Forest",
+            "datasets": 15,
+            "kumo_wins": 15,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.0178640727124183,
+            "median_relative_advantage": 0.018869501901243223,
+            "wilcoxon_p": 6.103515625e-05,
+            "holm_p": 0.00042724609375
+          },
+          {
+            "baseline": "XGBoost",
+            "datasets": 15,
+            "kumo_wins": 14,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.018359374999999956,
+            "median_relative_advantage": 0.019402832041789837,
+            "wilcoxon_p": 0.00018310546875,
+            "holm_p": 0.000732421875
+          }
+        ]
+      },
+      "macro_f1": {
+        "datasets": 15,
+        "average_rank": {
+          "Kumo Tabular": 2.2,
+          "XGBoost": 3.733,
+          "CatBoost": 4.2,
+          "HistGradientBoosting": 4.6,
+          "LightGBM": 4.6,
+          "Logistic Regression": 4.8,
+          "Extra Trees": 5.8,
+          "Random Forest": 6.067
+        },
+        "friedman_statistic": 25.5555555555556,
+        "friedman_p": 0.0006045343032312115,
+        "kumo_vs_baselines": [
+          {
+            "baseline": "CatBoost",
+            "datasets": 15,
+            "kumo_wins": 14,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.02691304433700825,
+            "median_relative_advantage": 0.046982772114696016,
+            "wilcoxon_p": 0.00115966796875,
+            "holm_p": 0.00811767578125
+          },
+          {
+            "baseline": "Extra Trees",
+            "datasets": 15,
+            "kumo_wins": 13,
+            "ties": 0,
+            "kumo_losses": 2,
+            "median_advantage": 0.04278553689515752,
+            "median_relative_advantage": 0.05888637997410516,
+            "wilcoxon_p": 0.00115966796875,
+            "holm_p": 0.00811767578125
+          },
+          {
+            "baseline": "HistGradientBoosting",
+            "datasets": 15,
+            "kumo_wins": 12,
+            "ties": 0,
+            "kumo_losses": 3,
+            "median_advantage": 0.013344360923482235,
+            "median_relative_advantage": 0.013789484558372443,
+            "wilcoxon_p": 0.01025390625,
+            "holm_p": 0.033447265625
+          },
+          {
+            "baseline": "LightGBM",
+            "datasets": 15,
+            "kumo_wins": 11,
+            "ties": 0,
+            "kumo_losses": 4,
+            "median_advantage": 0.01971431253772682,
+            "median_relative_advantage": 0.02472603796749377,
+            "wilcoxon_p": 0.012451171875,
+            "holm_p": 0.033447265625
+          },
+          {
+            "baseline": "Logistic Regression",
+            "datasets": 15,
+            "kumo_wins": 13,
+            "ties": 0,
+            "kumo_losses": 2,
+            "median_advantage": 0.019114308233065813,
+            "median_relative_advantage": 0.03096326733603329,
+            "wilcoxon_p": 0.00836181640625,
+            "holm_p": 0.033447265625
+          },
+          {
+            "baseline": "Random Forest",
+            "datasets": 15,
+            "kumo_wins": 12,
+            "ties": 0,
+            "kumo_losses": 3,
+            "median_advantage": 0.040067224588614225,
+            "median_relative_advantage": 0.059848285156722775,
+            "wilcoxon_p": 0.0042724609375,
+            "holm_p": 0.0213623046875
+          },
+          {
+            "baseline": "XGBoost",
+            "datasets": 15,
+            "kumo_wins": 12,
+            "ties": 0,
+            "kumo_losses": 3,
+            "median_advantage": 0.01308168327556114,
+            "median_relative_advantage": 0.01735124884837452,
+            "wilcoxon_p": 0.04791259765625,
+            "holm_p": 0.04791259765625
+          }
+        ]
+      }
+    },
+    "excluding_overlap_with_original_study": {
+      "log_loss": {
+        "datasets": 14,
+        "average_rank": {
+          "Kumo Tabular": 1.071,
+          "CatBoost": 2.429,
+          "Logistic Regression": 3.857,
+          "Random Forest": 4.857,
+          "XGBoost": 5.143,
+          "Extra Trees": 6.071,
+          "LightGBM": 6.214,
+          "HistGradientBoosting": 6.357
+        },
+        "friedman_statistic": 60.333333333333314,
+        "friedman_p": 1.2950278485460844e-10,
+        "kumo_vs_baselines": [
+          {
+            "baseline": "CatBoost",
+            "datasets": 14,
+            "kumo_wins": 14,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.02169553267618364,
+            "median_relative_advantage": 0.12113526507411829,
+            "wilcoxon_p": 0.0001220703125,
+            "holm_p": 0.0008544921875
+          },
+          {
+            "baseline": "Extra Trees",
+            "datasets": 14,
+            "kumo_wins": 14,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.25340255145678936,
+            "median_relative_advantage": 0.5793676127737682,
+            "wilcoxon_p": 0.0001220703125,
+            "holm_p": 0.0008544921875
+          },
+          {
+            "baseline": "HistGradientBoosting",
+            "datasets": 14,
+            "kumo_wins": 14,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.1394480282428248,
+            "median_relative_advantage": 0.38298469226863097,
+            "wilcoxon_p": 0.0001220703125,
+            "holm_p": 0.0008544921875
+          },
+          {
+            "baseline": "LightGBM",
+            "datasets": 14,
+            "kumo_wins": 14,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.1540392606995641,
+            "median_relative_advantage": 0.37274716622393195,
+            "wilcoxon_p": 0.0001220703125,
+            "holm_p": 0.0008544921875
+          },
+          {
+            "baseline": "Logistic Regression",
+            "datasets": 14,
+            "kumo_wins": 13,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.05887736984624645,
+            "median_relative_advantage": 0.2319162054067021,
+            "wilcoxon_p": 0.000244140625,
+            "holm_p": 0.0008544921875
+          },
+          {
+            "baseline": "Random Forest",
+            "datasets": 14,
+            "kumo_wins": 14,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.1258867360917565,
+            "median_relative_advantage": 0.3686268568886626,
+            "wilcoxon_p": 0.0001220703125,
+            "holm_p": 0.0008544921875
+          },
+          {
+            "baseline": "XGBoost",
+            "datasets": 14,
+            "kumo_wins": 14,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.14939146936290917,
+            "median_relative_advantage": 0.3324955158377704,
+            "wilcoxon_p": 0.0001220703125,
+            "holm_p": 0.0008544921875
+          }
+        ]
+      },
+      "accuracy": {
+        "datasets": 14,
+        "average_rank": {
+          "Kumo Tabular": 1.821,
+          "CatBoost": 3.821,
+          "Logistic Regression": 4.071,
+          "XGBoost": 4.5,
+          "HistGradientBoosting": 5.179,
+          "Extra Trees": 5.214,
+          "LightGBM": 5.321,
+          "Random Forest": 6.071
+        },
+        "friedman_statistic": 27.940273037542642,
+        "friedman_p": 0.00022543997080899696,
+        "kumo_vs_baselines": [
+          {
+            "baseline": "CatBoost",
+            "datasets": 14,
+            "kumo_wins": 12,
+            "ties": 1,
+            "kumo_losses": 1,
+            "median_advantage": 0.008615279195018921,
+            "median_relative_advantage": 0.009537421377280855,
+            "wilcoxon_p": 0.006103515625,
+            "holm_p": 0.01220703125
+          },
+          {
+            "baseline": "Extra Trees",
+            "datasets": 14,
+            "kumo_wins": 13,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.02535679729075946,
+            "median_relative_advantage": 0.028743782787428375,
+            "wilcoxon_p": 0.000244140625,
+            "holm_p": 0.001708984375
+          },
+          {
+            "baseline": "HistGradientBoosting",
+            "datasets": 14,
+            "kumo_wins": 13,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.014483396965971118,
+            "median_relative_advantage": 0.017485790318349778,
+            "wilcoxon_p": 0.000244140625,
+            "holm_p": 0.001708984375
+          },
+          {
+            "baseline": "LightGBM",
+            "datasets": 14,
+            "kumo_wins": 12,
+            "ties": 0,
+            "kumo_losses": 2,
+            "median_advantage": 0.013676940773443669,
+            "median_relative_advantage": 0.015552577866367434,
+            "wilcoxon_p": 0.0006103515625,
+            "holm_p": 0.0030517578125
+          },
+          {
+            "baseline": "Logistic Regression",
+            "datasets": 14,
+            "kumo_wins": 11,
+            "ties": 0,
+            "kumo_losses": 3,
+            "median_advantage": 0.01638304089472087,
+            "median_relative_advantage": 0.019133887190916677,
+            "wilcoxon_p": 0.008544921875,
+            "holm_p": 0.01220703125
+          },
+          {
+            "baseline": "Random Forest",
+            "datasets": 14,
+            "kumo_wins": 13,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.023909853249475865,
+            "median_relative_advantage": 0.0269029659465397,
+            "wilcoxon_p": 0.001220703125,
+            "holm_p": 0.003662109375
+          },
+          {
+            "baseline": "XGBoost",
+            "datasets": 14,
+            "kumo_wins": 12,
+            "ties": 0,
+            "kumo_losses": 2,
+            "median_advantage": 0.017793843962764788,
+            "median_relative_advantage": 0.0227646599454914,
+            "wilcoxon_p": 0.0006103515625,
+            "holm_p": 0.0030517578125
+          }
+        ]
+      },
+      "roc_auc": {
+        "datasets": 14,
+        "average_rank": {
+          "Kumo Tabular": 1.357,
+          "CatBoost": 2.714,
+          "Logistic Regression": 4.571,
+          "Random Forest": 5.143,
+          "XGBoost": 5.286,
+          "HistGradientBoosting": 5.429,
+          "Extra Trees": 5.714,
+          "LightGBM": 5.786
+        },
+        "friedman_statistic": 42.358361774743976,
+        "friedman_p": 4.435704148810691e-07,
+        "kumo_vs_baselines": [
+          {
+            "baseline": "CatBoost",
+            "datasets": 14,
+            "kumo_wins": 12,
+            "ties": 1,
+            "kumo_losses": 1,
+            "median_advantage": 0.013342182515131473,
+            "median_relative_advantage": 0.013915363644700706,
+            "wilcoxon_p": 0.00048828125,
+            "holm_p": 0.00146484375
+          },
+          {
+            "baseline": "Extra Trees",
+            "datasets": 14,
+            "kumo_wins": 12,
+            "ties": 1,
+            "kumo_losses": 1,
+            "median_advantage": 0.02470822592017219,
+            "median_relative_advantage": 0.02844964776492214,
+            "wilcoxon_p": 0.00048828125,
+            "holm_p": 0.00146484375
+          },
+          {
+            "baseline": "HistGradientBoosting",
+            "datasets": 14,
+            "kumo_wins": 14,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.02747929104868435,
+            "median_relative_advantage": 0.03219941745624552,
+            "wilcoxon_p": 0.0001220703125,
+            "holm_p": 0.0008544921875
+          },
+          {
+            "baseline": "LightGBM",
+            "datasets": 14,
+            "kumo_wins": 14,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.025699643874643963,
+            "median_relative_advantage": 0.02971328799908088,
+            "wilcoxon_p": 0.0001220703125,
+            "holm_p": 0.0008544921875
+          },
+          {
+            "baseline": "Logistic Regression",
+            "datasets": 14,
+            "kumo_wins": 13,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.013612179171185346,
+            "median_relative_advantage": 0.015454834536097764,
+            "wilcoxon_p": 0.0003662109375,
+            "holm_p": 0.00146484375
+          },
+          {
+            "baseline": "Random Forest",
+            "datasets": 14,
+            "kumo_wins": 14,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.01906303622956268,
+            "median_relative_advantage": 0.02124940876576415,
+            "wilcoxon_p": 0.0001220703125,
+            "holm_p": 0.0008544921875
+          },
+          {
+            "baseline": "XGBoost",
+            "datasets": 14,
+            "kumo_wins": 13,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.0290765988410861,
+            "median_relative_advantage": 0.03259834263470661,
+            "wilcoxon_p": 0.0003662109375,
+            "holm_p": 0.00146484375
+          }
+        ]
+      },
+      "macro_f1": {
+        "datasets": 14,
+        "average_rank": {
+          "Kumo Tabular": 2.286,
+          "XGBoost": 3.643,
+          "CatBoost": 4.286,
+          "HistGradientBoosting": 4.429,
+          "LightGBM": 4.643,
+          "Logistic Regression": 5.0,
+          "Extra Trees": 5.786,
+          "Random Forest": 5.929
+        },
+        "friedman_statistic": 22.52380952380952,
+        "friedman_p": 0.0020623260717295626,
+        "kumo_vs_baselines": [
+          {
+            "baseline": "CatBoost",
+            "datasets": 14,
+            "kumo_wins": 13,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.03266674420066673,
+            "median_relative_advantage": 0.0478449096751396,
+            "wilcoxon_p": 0.001708984375,
+            "holm_p": 0.011962890625
+          },
+          {
+            "baseline": "Extra Trees",
+            "datasets": 14,
+            "kumo_wins": 12,
+            "ties": 0,
+            "kumo_losses": 2,
+            "median_advantage": 0.0452773777256662,
+            "median_relative_advantage": 0.05974625182344338,
+            "wilcoxon_p": 0.0023193359375,
+            "holm_p": 0.013916015625
+          },
+          {
+            "baseline": "HistGradientBoosting",
+            "datasets": 14,
+            "kumo_wins": 11,
+            "ties": 0,
+            "kumo_losses": 3,
+            "median_advantage": 0.02116798467433112,
+            "median_relative_advantage": 0.026402867511666577,
+            "wilcoxon_p": 0.013427734375,
+            "holm_p": 0.04296875
+          },
+          {
+            "baseline": "LightGBM",
+            "datasets": 14,
+            "kumo_wins": 10,
+            "ties": 0,
+            "kumo_losses": 4,
+            "median_advantage": 0.024460616512523237,
+            "median_relative_advantage": 0.031200818332114008,
+            "wilcoxon_p": 0.013427734375,
+            "holm_p": 0.04296875
+          },
+          {
+            "baseline": "Logistic Regression",
+            "datasets": 14,
+            "kumo_wins": 12,
+            "ties": 0,
+            "kumo_losses": 2,
+            "median_advantage": 0.032797401254768155,
+            "median_relative_advantage": 0.04409979409297067,
+            "wilcoxon_p": 0.0107421875,
+            "holm_p": 0.04296875
+          },
+          {
+            "baseline": "Random Forest",
+            "datasets": 14,
+            "kumo_wins": 11,
+            "ties": 0,
+            "kumo_losses": 3,
+            "median_advantage": 0.0441126374060381,
+            "median_relative_advantage": 0.0631435148448097,
+            "wilcoxon_p": 0.008544921875,
+            "holm_p": 0.042724609375
+          },
+          {
+            "baseline": "XGBoost",
+            "datasets": 14,
+            "kumo_wins": 11,
+            "ties": 0,
+            "kumo_losses": 3,
+            "median_advantage": 0.020774610866958754,
+            "median_relative_advantage": 0.03186497408588519,
+            "wilcoxon_p": 0.0579833984375,
+            "holm_p": 0.0579833984375
+          }
+        ]
+      }
+    },
+    "dataset_families_collapsed": {
+      "log_loss": {
+        "datasets": 11,
+        "average_rank": {
+          "Kumo Tabular": 1.091,
+          "CatBoost": 2.545,
+          "Logistic Regression": 3.545,
+          "XGBoost": 4.909,
+          "Random Forest": 5.455,
+          "Extra Trees": 5.818,
+          "HistGradientBoosting": 6.182,
+          "LightGBM": 6.455
+        },
+        "friedman_statistic": 47.33333333333337,
+        "friedman_p": 4.805638884993182e-08,
+        "kumo_vs_baselines": [
+          {
+            "baseline": "CatBoost",
+            "datasets": 11,
+            "kumo_wins": 11,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.02070086690259776,
+            "median_relative_advantage": 0.24272010558615753,
+            "wilcoxon_p": 0.0009765625,
+            "holm_p": 0.0068359375
+          },
+          {
+            "baseline": "Extra Trees",
+            "datasets": 11,
+            "kumo_wins": 11,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.18937683802676553,
+            "median_relative_advantage": 0.5175578124508707,
+            "wilcoxon_p": 0.0009765625,
+            "holm_p": 0.0068359375
+          },
+          {
+            "baseline": "HistGradientBoosting",
+            "datasets": 11,
+            "kumo_wins": 11,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.1195665483377823,
+            "median_relative_advantage": 0.42761701351628245,
+            "wilcoxon_p": 0.0009765625,
+            "holm_p": 0.0068359375
+          },
+          {
+            "baseline": "LightGBM",
+            "datasets": 11,
+            "kumo_wins": 11,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.12512316961885717,
+            "median_relative_advantage": 0.40758620226756304,
+            "wilcoxon_p": 0.0009765625,
+            "holm_p": 0.0068359375
+          },
+          {
+            "baseline": "Logistic Regression",
+            "datasets": 11,
+            "kumo_wins": 10,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.04946572496192264,
+            "median_relative_advantage": 0.2053348764061832,
+            "wilcoxon_p": 0.001953125,
+            "holm_p": 0.0068359375
+          },
+          {
+            "baseline": "Random Forest",
+            "datasets": 11,
+            "kumo_wins": 11,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.11745352726316455,
+            "median_relative_advantage": 0.40183252023739635,
+            "wilcoxon_p": 0.0009765625,
+            "holm_p": 0.0068359375
+          },
+          {
+            "baseline": "XGBoost",
+            "datasets": 11,
+            "kumo_wins": 11,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.14110917871111045,
+            "median_relative_advantage": 0.325677086890626,
+            "wilcoxon_p": 0.0009765625,
+            "holm_p": 0.0068359375
+          }
+        ]
+      },
+      "accuracy": {
+        "datasets": 11,
+        "average_rank": {
+          "Kumo Tabular": 1.864,
+          "CatBoost": 3.5,
+          "Logistic Regression": 3.818,
+          "XGBoost": 4.364,
+          "LightGBM": 4.864,
+          "HistGradientBoosting": 5.136,
+          "Extra Trees": 5.818,
+          "Random Forest": 6.636
+        },
+        "friedman_statistic": 28.18300653594771,
+        "friedman_p": 0.00020371795623542509,
+        "kumo_vs_baselines": [
+          {
+            "baseline": "CatBoost",
+            "datasets": 11,
+            "kumo_wins": 9,
+            "ties": 1,
+            "kumo_losses": 1,
+            "median_advantage": 0.008803258145363424,
+            "median_relative_advantage": 0.009041474950931513,
+            "wilcoxon_p": 0.02734375,
+            "holm_p": 0.048828125
+          },
+          {
+            "baseline": "Extra Trees",
+            "datasets": 11,
+            "kumo_wins": 10,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.033333333333333215,
+            "median_relative_advantage": 0.036437246963562625,
+            "wilcoxon_p": 0.001953125,
+            "holm_p": 0.013671875
+          },
+          {
+            "baseline": "HistGradientBoosting",
+            "datasets": 11,
+            "kumo_wins": 10,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.012312030075188107,
+            "median_relative_advantage": 0.013831511195307324,
+            "wilcoxon_p": 0.001953125,
+            "holm_p": 0.013671875
+          },
+          {
+            "baseline": "LightGBM",
+            "datasets": 11,
+            "kumo_wins": 9,
+            "ties": 0,
+            "kumo_losses": 2,
+            "median_advantage": 0.01521114106019772,
+            "median_relative_advantage": 0.017500335948563754,
+            "wilcoxon_p": 0.0048828125,
+            "holm_p": 0.01953125
+          },
+          {
+            "baseline": "Logistic Regression",
+            "datasets": 11,
+            "kumo_wins": 9,
+            "ties": 0,
+            "kumo_losses": 2,
+            "median_advantage": 0.018956944885221594,
+            "median_relative_advantage": 0.01932325476072373,
+            "wilcoxon_p": 0.0244140625,
+            "holm_p": 0.048828125
+          },
+          {
+            "baseline": "Random Forest",
+            "datasets": 11,
+            "kumo_wins": 10,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.025597484276729587,
+            "median_relative_advantage": 0.029805931893079486,
+            "wilcoxon_p": 0.0048828125,
+            "holm_p": 0.01953125
+          },
+          {
+            "baseline": "XGBoost",
+            "datasets": 11,
+            "kumo_wins": 10,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.024624060150375993,
+            "median_relative_advantage": 0.033528782167620716,
+            "wilcoxon_p": 0.001953125,
+            "holm_p": 0.013671875
+          }
+        ]
+      },
+      "roc_auc": {
+        "datasets": 11,
+        "average_rank": {
+          "Kumo Tabular": 1.364,
+          "CatBoost": 2.909,
+          "Logistic Regression": 4.455,
+          "XGBoost": 5.091,
+          "HistGradientBoosting": 5.182,
+          "Extra Trees": 5.273,
+          "Random Forest": 5.636,
+          "LightGBM": 6.091
+        },
+        "friedman_statistic": 32.4130434782609,
+        "friedman_p": 3.404447496026083e-05,
+        "kumo_vs_baselines": [
+          {
+            "baseline": "CatBoost",
+            "datasets": 11,
+            "kumo_wins": 9,
+            "ties": 1,
+            "kumo_losses": 1,
+            "median_advantage": 0.009996056393571817,
+            "median_relative_advantage": 0.010713079279639433,
+            "wilcoxon_p": 0.00390625,
+            "holm_p": 0.0087890625
+          },
+          {
+            "baseline": "Extra Trees",
+            "datasets": 11,
+            "kumo_wins": 9,
+            "ties": 1,
+            "kumo_losses": 1,
+            "median_advantage": 0.01764814814814808,
+            "median_relative_advantage": 0.021364065121684896,
+            "wilcoxon_p": 0.005859375,
+            "holm_p": 0.0087890625
+          },
+          {
+            "baseline": "HistGradientBoosting",
+            "datasets": 11,
+            "kumo_wins": 11,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.015800000000000036,
+            "median_relative_advantage": 0.016425942477435302,
+            "wilcoxon_p": 0.0009765625,
+            "holm_p": 0.0068359375
+          },
+          {
+            "baseline": "LightGBM",
+            "datasets": 11,
+            "kumo_wins": 11,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.018106888165894452,
+            "median_relative_advantage": 0.01957587142640548,
+            "wilcoxon_p": 0.0009765625,
+            "holm_p": 0.0068359375
+          },
+          {
+            "baseline": "Logistic Regression",
+            "datasets": 11,
+            "kumo_wins": 11,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.009814814814814832,
+            "median_relative_advantage": 0.012101896293366414,
+            "wilcoxon_p": 0.0009765625,
+            "holm_p": 0.0068359375
+          },
+          {
+            "baseline": "Random Forest",
+            "datasets": 11,
+            "kumo_wins": 11,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.014849782568635783,
+            "median_relative_advantage": 0.016388153853017843,
+            "wilcoxon_p": 0.0009765625,
+            "holm_p": 0.0068359375
+          },
+          {
+            "baseline": "XGBoost",
+            "datasets": 11,
+            "kumo_wins": 10,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.014888888888888951,
+            "median_relative_advantage": 0.015464088549217556,
+            "wilcoxon_p": 0.0029296875,
+            "holm_p": 0.0087890625
+          }
+        ]
+      },
+      "macro_f1": {
+        "datasets": 11,
+        "average_rank": {
+          "Kumo Tabular": 1.818,
+          "CatBoost": 3.545,
+          "XGBoost": 4.0,
+          "HistGradientBoosting": 4.636,
+          "Logistic Regression": 4.818,
+          "LightGBM": 4.818,
+          "Extra Trees": 5.727,
+          "Random Forest": 6.636
+        },
+        "friedman_statistic": 26.848484848484873,
+        "friedman_p": 0.00035486619647242385,
+        "kumo_vs_baselines": [
+          {
+            "baseline": "CatBoost",
+            "datasets": 11,
+            "kumo_wins": 10,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.02385408413482537,
+            "median_relative_advantage": 0.03548541462289539,
+            "wilcoxon_p": 0.013671875,
+            "holm_p": 0.041015625
+          },
+          {
+            "baseline": "Extra Trees",
+            "datasets": 11,
+            "kumo_wins": 10,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.047769218556174886,
+            "median_relative_advantage": 0.05888637997410516,
+            "wilcoxon_p": 0.0029296875,
+            "holm_p": 0.0205078125
+          },
+          {
+            "baseline": "HistGradientBoosting",
+            "datasets": 11,
+            "kumo_wins": 10,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.013344360923482235,
+            "median_relative_advantage": 0.013789484558372443,
+            "wilcoxon_p": 0.0029296875,
+            "holm_p": 0.0205078125
+          },
+          {
+            "baseline": "LightGBM",
+            "datasets": 11,
+            "kumo_wins": 9,
+            "ties": 0,
+            "kumo_losses": 2,
+            "median_advantage": 0.029206920487319654,
+            "median_relative_advantage": 0.03767559869673425,
+            "wilcoxon_p": 0.009765625,
+            "holm_p": 0.0390625
+          },
+          {
+            "baseline": "Logistic Regression",
+            "datasets": 11,
+            "kumo_wins": 9,
+            "ties": 0,
+            "kumo_losses": 2,
+            "median_advantage": 0.02921571869122297,
+            "median_relative_advantage": 0.037725067617633175,
+            "wilcoxon_p": 0.0419921875,
+            "holm_p": 0.0419921875
+          },
+          {
+            "baseline": "Random Forest",
+            "datasets": 11,
+            "kumo_wins": 10,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.040067224588614225,
+            "median_relative_advantage": 0.059848285156722775,
+            "wilcoxon_p": 0.0029296875,
+            "holm_p": 0.0205078125
+          },
+          {
+            "baseline": "XGBoost",
+            "datasets": 11,
+            "kumo_wins": 10,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.01308168327556114,
+            "median_relative_advantage": 0.01735124884837452,
+            "wilcoxon_p": 0.013671875,
+            "holm_p": 0.041015625
+          }
+        ]
+      }
+    },
+    "runtime_seconds_per_fold": {
+      "median": {
+        "CatBoost": 4.5644,
+        "Extra Trees": 1.0867,
+        "HistGradientBoosting": 0.4867,
+        "Kumo Tabular": 1.2749,
+        "LightGBM": 0.1676,
+        "Logistic Regression": 0.0267,
+        "Random Forest": 1.3923,
+        "XGBoost": 0.1813
+      },
+      "q25": {
+        "CatBoost": 3.2514,
+        "Extra Trees": 1.0006,
+        "HistGradientBoosting": 0.3227,
+        "Kumo Tabular": 0.8958,
+        "LightGBM": 0.0939,
+        "Logistic Regression": 0.0147,
+        "Random Forest": 1.2841,
+        "XGBoost": 0.1139
+      },
+      "q75": {
+        "CatBoost": 5.8239,
+        "Extra Trees": 1.2417,
+        "HistGradientBoosting": 1.4744,
+        "Kumo Tabular": 3.0532,
+        "LightGBM": 0.3184,
+        "Logistic Regression": 0.0532,
+        "Random Forest": 1.5425,
+        "XGBoost": 0.2828
+      }
+    }
+  },
+  "regression": {
+    "all": {
+      "rmse": {
+        "datasets": 6,
+        "average_rank": {
+          "Kumo Tabular": 1.667,
+          "CatBoost": 2.667,
+          "Extra Trees": 3.5,
+          "XGBoost": 4.167,
+          "Random Forest": 4.333,
+          "HistGradientBoosting": 5.333,
+          "LightGBM": 6.333,
+          "Linear Regression": 8.0
+        },
+        "friedman_statistic": 28.833333333333314,
+        "friedman_p": 0.0001551689928992199,
+        "kumo_vs_baselines": [
+          {
+            "baseline": "CatBoost",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.2269804056401118,
+            "median_relative_advantage": 0.026974145270135787,
+            "wilcoxon_p": 0.15625,
+            "holm_p": 0.3125
+          },
+          {
+            "baseline": "Extra Trees",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.32530384616635266,
+            "median_relative_advantage": 0.1038956000948586,
+            "wilcoxon_p": 0.09375,
+            "holm_p": 0.28125
+          },
+          {
+            "baseline": "HistGradientBoosting",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.47590636091944166,
+            "median_relative_advantage": 0.15812729661604824,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "LightGBM",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.4911186629223574,
+            "median_relative_advantage": 0.15873799287408383,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "Linear Regression",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 3.285079075323161,
+            "median_relative_advantage": 0.48680903768640227,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "Random Forest",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.4558075341760218,
+            "median_relative_advantage": 0.09559116501679693,
+            "wilcoxon_p": 0.0625,
+            "holm_p": 0.25
+          },
+          {
+            "baseline": "XGBoost",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.38053997143963575,
+            "median_relative_advantage": 0.12836524561943413,
+            "wilcoxon_p": 0.15625,
+            "holm_p": 0.3125
+          }
+        ]
+      },
+      "mae": {
+        "datasets": 6,
+        "average_rank": {
+          "Kumo Tabular": 1.333,
+          "CatBoost": 2.833,
+          "Extra Trees": 3.167,
+          "XGBoost": 3.667,
+          "Random Forest": 4.667,
+          "HistGradientBoosting": 5.667,
+          "LightGBM": 6.667,
+          "Linear Regression": 8.0
+        },
+        "friedman_statistic": 33.611111111111114,
+        "friedman_p": 2.0363849245397185e-05,
+        "kumo_vs_baselines": [
+          {
+            "baseline": "CatBoost",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.32126464515258896,
+            "median_relative_advantage": 0.17007173045746452,
+            "wilcoxon_p": 0.09375,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "Extra Trees",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.24781907789286334,
+            "median_relative_advantage": 0.1660898069280824,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "HistGradientBoosting",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.4394365458239805,
+            "median_relative_advantage": 0.26555799147943115,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "LightGBM",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.4400494128109043,
+            "median_relative_advantage": 0.2667320542992516,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "Linear Regression",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 2.5251875251260296,
+            "median_relative_advantage": 0.5882629703031067,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "Random Forest",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.38021631477935436,
+            "median_relative_advantage": 0.21376022051987448,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "XGBoost",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.29700273908393604,
+            "median_relative_advantage": 0.22745357077218203,
+            "wilcoxon_p": 0.09375,
+            "holm_p": 0.21875
+          }
+        ]
+      },
+      "r2": {
+        "datasets": 6,
+        "average_rank": {
+          "Kumo Tabular": 1.667,
+          "CatBoost": 2.5,
+          "Extra Trees": 3.5,
+          "XGBoost": 4.333,
+          "Random Forest": 4.333,
+          "HistGradientBoosting": 5.5,
+          "LightGBM": 6.167,
+          "Linear Regression": 8.0
+        },
+        "friedman_statistic": 29.111111111111114,
+        "friedman_p": 0.00013808979393389938,
+        "kumo_vs_baselines": [
+          {
+            "baseline": "CatBoost",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.008548854216999108,
+            "median_relative_advantage": 0.011638057662742346,
+            "wilcoxon_p": 0.0625,
+            "holm_p": 0.25
+          },
+          {
+            "baseline": "Extra Trees",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.023821276545888947,
+            "median_relative_advantage": 0.025129496721558855,
+            "wilcoxon_p": 0.4375,
+            "holm_p": 0.4375
+          },
+          {
+            "baseline": "HistGradientBoosting",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.02676110441771265,
+            "median_relative_advantage": 0.04339036845208416,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "LightGBM",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.028379160275548765,
+            "median_relative_advantage": 0.04407630541379722,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "Linear Regression",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.12402685210053607,
+            "median_relative_advantage": 0.3040774171882197,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "Random Forest",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.02491606301909305,
+            "median_relative_advantage": 0.028439003965749436,
+            "wilcoxon_p": 0.15625,
+            "holm_p": 0.3125
+          },
+          {
+            "baseline": "XGBoost",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.02589964946389317,
+            "median_relative_advantage": 0.027355477507336856,
+            "wilcoxon_p": 0.0625,
+            "holm_p": 0.25
+          }
+        ]
+      }
+    },
+    "excluding_overlap_with_original_study": {
+      "rmse": {
+        "datasets": 6,
+        "average_rank": {
+          "Kumo Tabular": 1.667,
+          "CatBoost": 2.667,
+          "Extra Trees": 3.5,
+          "XGBoost": 4.167,
+          "Random Forest": 4.333,
+          "HistGradientBoosting": 5.333,
+          "LightGBM": 6.333,
+          "Linear Regression": 8.0
+        },
+        "friedman_statistic": 28.833333333333314,
+        "friedman_p": 0.0001551689928992199,
+        "kumo_vs_baselines": [
+          {
+            "baseline": "CatBoost",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.2269804056401118,
+            "median_relative_advantage": 0.026974145270135787,
+            "wilcoxon_p": 0.15625,
+            "holm_p": 0.3125
+          },
+          {
+            "baseline": "Extra Trees",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.32530384616635266,
+            "median_relative_advantage": 0.1038956000948586,
+            "wilcoxon_p": 0.09375,
+            "holm_p": 0.28125
+          },
+          {
+            "baseline": "HistGradientBoosting",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.47590636091944166,
+            "median_relative_advantage": 0.15812729661604824,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "LightGBM",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.4911186629223574,
+            "median_relative_advantage": 0.15873799287408383,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "Linear Regression",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 3.285079075323161,
+            "median_relative_advantage": 0.48680903768640227,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "Random Forest",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.4558075341760218,
+            "median_relative_advantage": 0.09559116501679693,
+            "wilcoxon_p": 0.0625,
+            "holm_p": 0.25
+          },
+          {
+            "baseline": "XGBoost",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.38053997143963575,
+            "median_relative_advantage": 0.12836524561943413,
+            "wilcoxon_p": 0.15625,
+            "holm_p": 0.3125
+          }
+        ]
+      },
+      "mae": {
+        "datasets": 6,
+        "average_rank": {
+          "Kumo Tabular": 1.333,
+          "CatBoost": 2.833,
+          "Extra Trees": 3.167,
+          "XGBoost": 3.667,
+          "Random Forest": 4.667,
+          "HistGradientBoosting": 5.667,
+          "LightGBM": 6.667,
+          "Linear Regression": 8.0
+        },
+        "friedman_statistic": 33.611111111111114,
+        "friedman_p": 2.0363849245397185e-05,
+        "kumo_vs_baselines": [
+          {
+            "baseline": "CatBoost",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.32126464515258896,
+            "median_relative_advantage": 0.17007173045746452,
+            "wilcoxon_p": 0.09375,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "Extra Trees",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.24781907789286334,
+            "median_relative_advantage": 0.1660898069280824,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "HistGradientBoosting",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.4394365458239805,
+            "median_relative_advantage": 0.26555799147943115,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "LightGBM",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.4400494128109043,
+            "median_relative_advantage": 0.2667320542992516,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "Linear Regression",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 2.5251875251260296,
+            "median_relative_advantage": 0.5882629703031067,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "Random Forest",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.38021631477935436,
+            "median_relative_advantage": 0.21376022051987448,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "XGBoost",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.29700273908393604,
+            "median_relative_advantage": 0.22745357077218203,
+            "wilcoxon_p": 0.09375,
+            "holm_p": 0.21875
+          }
+        ]
+      },
+      "r2": {
+        "datasets": 6,
+        "average_rank": {
+          "Kumo Tabular": 1.667,
+          "CatBoost": 2.5,
+          "Extra Trees": 3.5,
+          "XGBoost": 4.333,
+          "Random Forest": 4.333,
+          "HistGradientBoosting": 5.5,
+          "LightGBM": 6.167,
+          "Linear Regression": 8.0
+        },
+        "friedman_statistic": 29.111111111111114,
+        "friedman_p": 0.00013808979393389938,
+        "kumo_vs_baselines": [
+          {
+            "baseline": "CatBoost",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.008548854216999108,
+            "median_relative_advantage": 0.011638057662742346,
+            "wilcoxon_p": 0.0625,
+            "holm_p": 0.25
+          },
+          {
+            "baseline": "Extra Trees",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.023821276545888947,
+            "median_relative_advantage": 0.025129496721558855,
+            "wilcoxon_p": 0.4375,
+            "holm_p": 0.4375
+          },
+          {
+            "baseline": "HistGradientBoosting",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.02676110441771265,
+            "median_relative_advantage": 0.04339036845208416,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "LightGBM",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.028379160275548765,
+            "median_relative_advantage": 0.04407630541379722,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "Linear Regression",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.12402685210053607,
+            "median_relative_advantage": 0.3040774171882197,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "Random Forest",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.02491606301909305,
+            "median_relative_advantage": 0.028439003965749436,
+            "wilcoxon_p": 0.15625,
+            "holm_p": 0.3125
+          },
+          {
+            "baseline": "XGBoost",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.02589964946389317,
+            "median_relative_advantage": 0.027355477507336856,
+            "wilcoxon_p": 0.0625,
+            "holm_p": 0.25
+          }
+        ]
+      }
+    },
+    "dataset_families_collapsed": {
+      "rmse": {
+        "datasets": 6,
+        "average_rank": {
+          "Kumo Tabular": 1.667,
+          "CatBoost": 2.667,
+          "Extra Trees": 3.5,
+          "XGBoost": 4.167,
+          "Random Forest": 4.333,
+          "HistGradientBoosting": 5.333,
+          "LightGBM": 6.333,
+          "Linear Regression": 8.0
+        },
+        "friedman_statistic": 28.833333333333314,
+        "friedman_p": 0.0001551689928992199,
+        "kumo_vs_baselines": [
+          {
+            "baseline": "CatBoost",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.2269804056401118,
+            "median_relative_advantage": 0.026974145270135787,
+            "wilcoxon_p": 0.15625,
+            "holm_p": 0.3125
+          },
+          {
+            "baseline": "Extra Trees",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.32530384616635266,
+            "median_relative_advantage": 0.1038956000948586,
+            "wilcoxon_p": 0.09375,
+            "holm_p": 0.28125
+          },
+          {
+            "baseline": "HistGradientBoosting",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.47590636091944166,
+            "median_relative_advantage": 0.15812729661604824,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "LightGBM",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.4911186629223574,
+            "median_relative_advantage": 0.15873799287408383,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "Linear Regression",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 3.285079075323161,
+            "median_relative_advantage": 0.48680903768640227,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "Random Forest",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.4558075341760218,
+            "median_relative_advantage": 0.09559116501679693,
+            "wilcoxon_p": 0.0625,
+            "holm_p": 0.25
+          },
+          {
+            "baseline": "XGBoost",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.38053997143963575,
+            "median_relative_advantage": 0.12836524561943413,
+            "wilcoxon_p": 0.15625,
+            "holm_p": 0.3125
+          }
+        ]
+      },
+      "mae": {
+        "datasets": 6,
+        "average_rank": {
+          "Kumo Tabular": 1.333,
+          "CatBoost": 2.833,
+          "Extra Trees": 3.167,
+          "XGBoost": 3.667,
+          "Random Forest": 4.667,
+          "HistGradientBoosting": 5.667,
+          "LightGBM": 6.667,
+          "Linear Regression": 8.0
+        },
+        "friedman_statistic": 33.611111111111114,
+        "friedman_p": 2.0363849245397185e-05,
+        "kumo_vs_baselines": [
+          {
+            "baseline": "CatBoost",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.32126464515258896,
+            "median_relative_advantage": 0.17007173045746452,
+            "wilcoxon_p": 0.09375,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "Extra Trees",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.24781907789286334,
+            "median_relative_advantage": 0.1660898069280824,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "HistGradientBoosting",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.4394365458239805,
+            "median_relative_advantage": 0.26555799147943115,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "LightGBM",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.4400494128109043,
+            "median_relative_advantage": 0.2667320542992516,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "Linear Regression",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 2.5251875251260296,
+            "median_relative_advantage": 0.5882629703031067,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "Random Forest",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.38021631477935436,
+            "median_relative_advantage": 0.21376022051987448,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "XGBoost",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.29700273908393604,
+            "median_relative_advantage": 0.22745357077218203,
+            "wilcoxon_p": 0.09375,
+            "holm_p": 0.21875
+          }
+        ]
+      },
+      "r2": {
+        "datasets": 6,
+        "average_rank": {
+          "Kumo Tabular": 1.667,
+          "CatBoost": 2.5,
+          "Extra Trees": 3.5,
+          "XGBoost": 4.333,
+          "Random Forest": 4.333,
+          "HistGradientBoosting": 5.5,
+          "LightGBM": 6.167,
+          "Linear Regression": 8.0
+        },
+        "friedman_statistic": 29.111111111111114,
+        "friedman_p": 0.00013808979393389938,
+        "kumo_vs_baselines": [
+          {
+            "baseline": "CatBoost",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.008548854216999108,
+            "median_relative_advantage": 0.011638057662742346,
+            "wilcoxon_p": 0.0625,
+            "holm_p": 0.25
+          },
+          {
+            "baseline": "Extra Trees",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.023821276545888947,
+            "median_relative_advantage": 0.025129496721558855,
+            "wilcoxon_p": 0.4375,
+            "holm_p": 0.4375
+          },
+          {
+            "baseline": "HistGradientBoosting",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.02676110441771265,
+            "median_relative_advantage": 0.04339036845208416,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "LightGBM",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.028379160275548765,
+            "median_relative_advantage": 0.04407630541379722,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "Linear Regression",
+            "datasets": 6,
+            "kumo_wins": 6,
+            "ties": 0,
+            "kumo_losses": 0,
+            "median_advantage": 0.12402685210053607,
+            "median_relative_advantage": 0.3040774171882197,
+            "wilcoxon_p": 0.03125,
+            "holm_p": 0.21875
+          },
+          {
+            "baseline": "Random Forest",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.02491606301909305,
+            "median_relative_advantage": 0.028439003965749436,
+            "wilcoxon_p": 0.15625,
+            "holm_p": 0.3125
+          },
+          {
+            "baseline": "XGBoost",
+            "datasets": 6,
+            "kumo_wins": 5,
+            "ties": 0,
+            "kumo_losses": 1,
+            "median_advantage": 0.02589964946389317,
+            "median_relative_advantage": 0.027355477507336856,
+            "wilcoxon_p": 0.0625,
+            "holm_p": 0.25
+          }
+        ]
+      }
+    },
+    "runtime_seconds_per_fold": {
+      "median": {
+        "CatBoost": 1.7285,
+        "Extra Trees": 0.7533,
+        "HistGradientBoosting": 0.3793,
+        "Kumo Tabular": 1.142,
+        "LightGBM": 0.1031,
+        "Linear Regression": 0.0037,
+        "Random Forest": 1.0772,
+        "XGBoost": 0.1253
+      },
+      "q25": {
+        "CatBoost": 1.3482,
+        "Extra Trees": 0.7365,
+        "HistGradientBoosting": 0.3414,
+        "Kumo Tabular": 0.9286,
+        "LightGBM": 0.092,
+        "Linear Regression": 0.0032,
+        "Random Forest": 1.0375,
+        "XGBoost": 0.1099
+      },
+      "q75": {
+        "CatBoost": 2.0183,
+        "Extra Trees": 0.7891,
+        "HistGradientBoosting": 0.4028,
+        "Kumo Tabular": 1.4706,
+        "LightGBM": 0.1168,
+        "Linear Regression": 0.0046,
+        "Random Forest": 1.1655,
+        "XGBoost": 0.1522
+      }
+    }
+  }
+}

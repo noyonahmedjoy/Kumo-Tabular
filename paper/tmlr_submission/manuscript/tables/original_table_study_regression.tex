@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Regression $R^2$ by training-set size (mean $\pm$ standard deviation over three seeds; full test split).}
+\label{tab:study_regression}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{rcccc}
+\toprule
+$n$ & Kumo Tabular & Linear Reg. & Random Forest & HistGB \\
+\midrule
+25 & \textbf{0.429}\,{\scriptsize$\pm$0.058} & 0.075\,{\scriptsize$\pm$0.304} & 0.388\,{\scriptsize$\pm$0.127} & $-$0.097\,{\scriptsize$\pm$0.087} \\
+50 & \textbf{0.437}\,{\scriptsize$\pm$0.019} & 0.331\,{\scriptsize$\pm$0.137} & 0.418\,{\scriptsize$\pm$0.008} & 0.348\,{\scriptsize$\pm$0.063} \\
+100 & \textbf{0.486}\,{\scriptsize$\pm$0.045} & 0.467\,{\scriptsize$\pm$0.076} & 0.433\,{\scriptsize$\pm$0.024} & 0.410\,{\scriptsize$\pm$0.043} \\
+200 & 0.505\,{\scriptsize$\pm$0.085} & \textbf{0.506}\,{\scriptsize$\pm$0.060} & 0.438\,{\scriptsize$\pm$0.057} & 0.391\,{\scriptsize$\pm$0.069} \\
+353 & \textbf{0.526}\,{\scriptsize$\pm$0.028} & 0.507\,{\scriptsize$\pm$0.048} & 0.440\,{\scriptsize$\pm$0.024} & 0.406\,{\scriptsize$\pm$0.030} \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,29 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Kumo Tabular versus each baseline on the primary metric, with datasets as the unit of analysis. W/T/L: datasets on which Kumo is better/equal/worse. Relative advantage: median over datasets of the baseline's loss minus Kumo's loss, divided by the baseline's loss (positive favours Kumo). $p$: two-sided Wilcoxon signed-rank test; Holm: adjusted across the seven baselines of a task. Avg.\ rank: average rank among all eight models (1 = best).}
+\label{tab:comparison}
+\begin{tabular}{llcrrrr}
+\toprule
+Task (metric) & Baseline & W/T/L & Rel.\ adv. & $p$ & Holm $p$ & Avg.\ rank \\
+\midrule
+\multirow{8}{*}{\shortstack[l]{Classification (log loss)\\$n=15$}} & Kumo Tabular & -- & -- & -- & -- & 1.07 \\
+& CatBoost & 15/0/0 & +12.8\% & $<$0.001 & $<$0.001 & 2.47 \\
+& Logistic reg. & 14/0/1 & +20.5\% & $<$0.001 & $<$0.001 & 3.73 \\
+& Random forest & 15/0/0 & +40.2\% & $<$0.001 & $<$0.001 & 5.00 \\
+& XGBoost & 15/0/0 & +33.0\% & $<$0.001 & $<$0.001 & 5.07 \\
+& Extra trees & 15/0/0 & +54.5\% & $<$0.001 & $<$0.001 & 6.00 \\
+& HistGB & 15/0/0 & +42.8\% & $<$0.001 & $<$0.001 & 6.33 \\
+& LightGBM & 15/0/0 & +40.8\% & $<$0.001 & $<$0.001 & 6.33 \\
+\midrule
+\multirow{8}{*}{\shortstack[l]{Regression (RMSE)\\$n=6$}} & Kumo Tabular & -- & -- & -- & -- & 1.67 \\
+& CatBoost & 5/0/1 & +2.7\% & 0.156 & 0.312 & 2.67 \\
+& Extra trees & 5/0/1 & +10.4\% & 0.094 & 0.281 & 3.50 \\
+& XGBoost & 5/0/1 & +12.8\% & 0.156 & 0.312 & 4.17 \\
+& Random forest & 5/0/1 & +9.6\% & 0.062 & 0.250 & 4.33 \\
+& HistGB & 6/0/0 & +15.8\% & 0.031 & 0.219 & 5.33 \\
+& LightGBM & 6/0/0 & +15.9\% & 0.031 & 0.219 & 6.33 \\
+& Linear reg. & 6/0/0 & +48.7\% & 0.031 & 0.219 & 8.00 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,42 @@
+# Statistical and Methodological Audit
+
+Audit date: 9 November 2026. Scope: the original two-dataset study (IEEE manuscript, `results/classification`, `results/regression`, `paper/build_paper_assets.py`) and the new OpenML benchmark (`results/openml_benchmark`, `scripts/analyze_openml_benchmark.py`, `ANALYSIS_PLAN.md`).
+
+Severity: **Critical** (invalidates a central claim), **Major** (weakens a central claim or blocks a needed analysis), **Moderate** (affects secondary claims or interpretation), **Minor** (presentation).
+
+## Findings
+
+| # | Problem | Evidence | Severity | Required correction | Corrected | Validation evidence |
+|---|---|---|---|---|---|---|
+| 1 | Conclusions about "small tabular data" rest on two datasets | `src/data_loader.py`: breast cancer and diabetes only | Critical | Evaluate on an externally defined suite; make the dataset the unit of inference | Yes | 22 OpenML datasets selected (`configs/openml_suite.json`), 21 evaluated (`forest_fires` excluded at load, see `ANALYSIS_PLAN.md`, Deviations); `analysis/analysis.json` |
+| 2 | Five resampled 80/20 splits of one dataset are dependent (overlapping training sets), so a naive paired t-test is anti-conservative | Overlap ≈ 80% of training rows between splits; naive and corrected p-values differ (e.g., accuracy 0.025 vs 0.080) | Major | Keep the Nadeau–Bengio correction for within-dataset results; never use the naive test for claims | Yes (already in the original analysis; kept as within-dataset, descriptive evidence in TMLR) | `paper/statistics.json`; Table of within-dataset results in the TMLR appendix |
+| 3 | Nadeau–Bengio is itself an approximation; with k = 5 its power is low and its confidence intervals are wide | Corrected intervals include zero for 7 of 8 comparisons | Moderate | Report as descriptive; base confirmatory claims on the cross-dataset design | Yes | TMLR manuscript, Section 5 |
+| 4 | The exact Wilcoxon test with five pairs cannot reach p < 0.0625 | 2/2^5 = 0.0625 | Moderate | State the bound; do not present it as evidence | Yes | Stated in both manuscripts |
+| 5 | Within-dataset inference cannot address generalization across datasets | Unit of replication is the split of one dataset | Major | Cross-dataset tests (Friedman; Wilcoxon signed-rank across datasets with Holm), per Demšar (2006) | Yes | `analysis/analysis.json`; `ANALYSIS_PLAN.md` |
+| 6 | Many correlated secondary metrics (accuracy, precision, recall, F1, ROC-AUC) invite selective reporting | Five classification metrics in the original study | Moderate | Fix one primary metric per task before seeing results (log loss; RMSE); others descriptive | Yes | `ANALYSIS_PLAN.md`, committed before results (commit `1a34db9`) |
+| 7 | Threshold metrics only; no proper scoring rule for probabilistic predictions | Original metrics depend on a 0.5 threshold | Moderate | Add log loss as primary classification metric | Yes | `src/evaluation.py::probabilistic_classification_metrics` |
+| 8 | Binary-only metric code (`labels=[0, 1]`, `predict_proba[:, 1]`) | `src/evaluation.py`, `src/benchmarking.py` | Major (blocks multiclass) | Add multiclass metrics with explicit averaging (macro-F1, one-vs-rest macro ROC-AUC, log loss over all labels); keep the original functions unchanged | Yes | `tests/test_openml_benchmark.py` (hand-computed values) |
+| 9 | Missing-class folds could misalign class probabilities | A rare class may be absent from a training fold | Moderate | Map each model's class columns to the full label set; zero probability for absent classes | Yes | `_full_probabilities`, `_baseline_probabilities`; unit test |
+| 10 | Weak baseline set relative to the literature the paper cites | No XGBoost, LightGBM, CatBoost, extra trees | Major | Add them with library defaults | Yes | `src/baseline_models.py::suite_baselines` |
+| 11 | Hyperparameter fairness: all models use defaults, but defaults are tuned for larger data (e.g., histogram gradient boosting with ≥ 20 samples per leaf predicts a constant at 25 rows) | Original training-size study | Moderate | Keep the "out-of-the-box" framing explicitly; do not claim superiority over tuned models | Yes (framing) | TMLR manuscript, Sections 3 and 7 |
+| 12 | Runtime confound: Kumo on GPU, baselines on CPU; millisecond timings noisy (up to 8x between runs) | `Reproducibility_Report.md` | Moderate | Runtimes descriptive only, by hardware, as medians and IQR; no ratio claims in the abstract | Yes | `analysis.json` (`runtime_seconds_per_fold`) |
+| 13 | Asymmetric warm-up: Kumo warmed up per dataset, baselines not | `src/openml_benchmark.py` | Minor | Documented; affects only first-fold baseline timings | Documented | TMLR manuscript, runtime paragraph |
+| 14 | Environment sensitivity of HistGradientBoosting (differs between local and Kaggle installations) | Kaggle evidence | Moderate | Record exact package versions; report the discrepancy | Yes | `results/openml_benchmark/environment.json` |
+| 15 | Dependence between datasets: related families (NASA defect data; `mfeat`) violate independence assumed by Friedman/Wilcoxon | Suite composition | Moderate | Pre-specified sensitivity analysis collapsing families | Yes | `analysis.json` (`dataset_families_collapsed`) |
+| 16 | `wdbc` overlaps with the original study's dataset | OpenML 1510 = Breast Cancer Wisconsin | Minor | Pre-specified sensitivity analysis excluding it | Yes | `analysis.json` (`excluding_overlap_with_original_study`) |
+| 17 | Regression evidence is thin (6 datasets evaluated) and cannot reach significance after Holm correction | Exact two-sided Wilcoxon minimum p = 0.031 for n = 6; × 7 > 0.05 (observed smallest Holm p = 0.219) | Major for regression claims | Treat regression results as descriptive; say so | Yes | `ANALYSIS_PLAN.md`; manuscript |
+| 18 | Practical vs statistical significance: small absolute differences (e.g., 0.012 accuracy ≈ one test row) | Original study | Moderate | Report effect sizes (median relative advantage, W/T/L) with every test | Yes | `analysis.json` |
+| 19 | Fold-level metrics averaged per dataset rather than pooled predictions | 10-fold CV, small test folds | Minor | Stated in the methods | Yes | TMLR manuscript, Section 4 |
+| 20 | Regression point estimate choice (median vs mean of quantiles) affects RMSE | IEEE manuscript, Table 6 | Minor | Keep the median (pre-specified); report sensitivity in the appendix | Yes | Appendix of the TMLR manuscript |
+| 21 | Data leakage | Kumo context excludes test rows (unit tests); preprocessing fit within pipelines; OpenML splits verified disjoint and covering all rows | None found | — | — | `tests/`, `parse_splits` and fold-coverage check in `load_openml_task` |
+| 22 | Seed handling | Fixed seeds; Kumo deterministic given its generator seed (bit-identical re-run); fold index used as seed in the OpenML benchmark | None found | — | — | `Reproducibility_Report.md` (IEEE package) |
+
+## Is the five-split protocol sufficient?
+
+For within-dataset comparisons it is adequate only as descriptive evidence: with the overlap correction no comparison remains significant after multiplicity adjustment, and the Wilcoxon test cannot reach conventional significance. It cannot support claims about tabular data in general, because the unit of replication is the split, not the dataset. The new benchmark addresses this by using datasets as independent units, a pre-specified primary metric per task, and a Friedman test followed by Holm-corrected pairwise Wilcoxon tests. Its remaining limits are the number of datasets (15 classification, 6 regression), the dependence between related datasets (addressed by a sensitivity analysis), and the restriction to small, fully numerical tables without missing values.
+
+## Verification of the reported results (added after the benchmark finished)
+
+- `scripts/validate_openml_results.py`: 21 of 21 raw result files valid, 1,680 rows (21 datasets × 10 folds × 8 models), all status `ok`, all metrics finite and in range, combined file identical to the raw files (`results/openml_benchmark/validation_report.json`).
+- `paper/tmlr_submission/verify_statistics.py`: independent recomputation (exact Wilcoxon enumeration, hand-coded Friedman with tie correction and Holm procedure, `math.fsum` means) reproduces all 217 reported statistics of `analysis/analysis.json`.
+- `paper/tmlr_submission/check_tmlr_numbers.py`: 53 of 53 numbers quoted in the manuscript match the result files.

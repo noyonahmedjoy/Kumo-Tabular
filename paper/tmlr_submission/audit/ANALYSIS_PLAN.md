@@ -2,6 +2,19 @@
 
 Written and committed on 9 November 2026, while the benchmark was running and before any of its results were inspected. The only result seen beforehand was the smoke test on `wdbc` (OpenML 1510), used to verify the pipeline. The analysis code is `scripts/analyze_openml_benchmark.py`, committed with this plan.
 
+> **Correction, 10 November 2026.** The opening sentence above overstates the timing, and the original text is kept as committed. The session record shows the following sequence on 9 November 2026 (local time):
+>
+> 1. 22:08:23: the `wdbc` verification run finished.
+> 2. 22:08:35: the 10-fold mean accuracy, ROC-AUC, log loss and runtime of all eight models on `wdbc` were printed and seen. Kumo Tabular had the best mean on all three quality metrics.
+> 3. About 22:09: the main run was started.
+> 4. 22:09:50: this plan was written.
+> 5. 22:10:05: the plan was committed to the local repository.
+> 6. 22:10:32: the next dataset finished.
+>
+> The plan was therefore written **after the complete `wdbc` results had been seen and before results for any other dataset existed**. The session record does not show that log loss and RMSE had been designated as primary metrics before the `wdbc` output was seen.
+>
+> The commit is local and has no external timestamp, so this is not a formal preregistration. The sentence "No dataset was added or removed after seeing results" below held when it was written. `forest_fires` was later removed after 17 other datasets had results, because it could not be loaded (Deviation 1). The decision did not depend on any result.
+
 ## Question
 
 Across a fixed, externally defined set of small, fully numerical tabular datasets, how does Kumo Tabular (`small` checkpoint, default inference settings) compare with seven untuned classical baselines in predictive quality and runtime?
@@ -44,3 +57,9 @@ Median and interquartile range of fit-plus-predict seconds per fold, per model. 
 ## Failure handling
 
 If any model fails on any fold, the analysis stops and the failure is reported. Failed runs are not dropped silently.
+
+## Deviations recorded after the plan was committed
+
+1. **`forest_fires` (OpenML 44962) excluded, 9 November 2026, 23:32.** The run stopped when loading this dataset. Its OpenML metadata reports zero symbolic features, so the metadata-based filter admitted it, but the data contain two text columns (`month`, `day`). The plan's selection criterion "numerical features only" therefore excludes it. No results for this dataset existed when the decision was made; it is applied mechanically and recorded in `configs/openml_suite.json` (`excluded_at_load`). The three other regression datasets not yet run at that point were checked and are fully numerical. The suite now has 15 classification and **6** regression datasets. With six regression datasets the smallest attainable two-sided Wilcoxon p-value is 2/2^6 = 0.031, so after Holm correction across seven comparisons no regression comparison can reach 0.05; regression results remain descriptive by design.
+2. **Runner change.** `scripts/run_openml_benchmark.py` now logs a dataset that cannot be loaded as specified and continues, instead of stopping the whole run. Completed datasets are not re-run (they are skipped by the resume check).
+3. **`wdbc` results come from the verification run** at 22:06 on 9 November, which used the same code and configuration as the main run; it was skipped as complete in the main run.

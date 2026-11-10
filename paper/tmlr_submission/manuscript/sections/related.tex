@@ -1,0 +1,42 @@
+\section{Related Work}
+\label{sec:related}
+
+\paragraph{Classical models for tabular data.}
+Logistic regression \citep{cox1958logistic} and least squares remain strong baselines for small, low-dimensional
+problems. Random forests \citep{breiman2001rf} and extremely randomized trees \citep{geurts2006extremely} average
+decorrelated trees; gradient boosting \citep{friedman2001gbm} fits trees sequentially to residuals, and its efficient
+implementations XGBoost \citep{chen2016xgboost}, LightGBM \citep{ke2017lightgbm} and CatBoost
+\citep{prokhorenkova2018catboost} are the usual reference standard. We use the scikit-learn implementations
+\citep{pedregosa2011sklearn} where available.
+
+\paragraph{Deep learning on tables.}
+Comparisons of neural architectures such as TabNet \citep{arik2021tabnet} and tabular transformers
+\citep{gorishniy2021revisiting} with tree ensembles found trees competitive or superior on many medium-sized datasets
+\citep{shwartzziv2022tabular,borisov2024survey,grinsztajn2022tree}. Well-regularized multilayer perceptrons can close
+the gap \citep{kadra2021welltuned}, and the best family varies with dataset properties \citep{mcelfresh2023neural}.
+
+\paragraph{In-context learning and tabular foundation models.}
+In-context learning, in which a pretrained model solves a task from examples in its input without weight updates,
+was popularized by large language models \citep{brown2020gpt3} built on transformers \citep{vaswani2017attention},
+and emerges for simple function classes under suitable training distributions \citep{garg2022icl}. Language models
+have also been applied to serialized tables \citep{hegselmann2023tabllm}. Prior-data fitted networks
+\citep{muller2022pfn} are trained on datasets sampled from a prior so that a forward pass approximates the posterior
+predictive distribution. TabPFN \citep{hollmann2023tabpfn} applied this to small classification tables, and its
+successor \citep{hollmann2025tabpfn} extended it to regression and larger inputs. TabICL \citep{qu2025tabicl}
+compresses rows with column- and row-wise attention before in-context learning; set attention with inducing points
+\citep{lee2019set} is a common component.
+
+\paragraph{Kumo Tabular.}
+Kumo Tabular \citep{nvidia_kumo_card,nvidia_kumo_blog} follows this line. Its developers describe column, row and
+in-context attention ``as introduced in TabICL and TabPFN'', pretraining on synthetic tables sampled from structural
+causal models, and three sizes with 28M to 215M parameters; they report leading results on several benchmark suites.
+Those claims are the developers' own. We are not aware of an independent evaluation of Kumo Tabular.
+
+\paragraph{Benchmarking methodology.}
+OpenML \citep{vanschoren2014openml} provides datasets with fixed evaluation splits; OpenML-CC18
+\citep{bischl2021openml} and OpenML-CTR23 \citep{fischer2023ctr23} are curated classification and regression suites.
+For comparisons across datasets we follow \citet{demsar2006comparisons}: a Friedman test \citep{friedman1937ranks}
+over all methods, with pairwise Wilcoxon signed-rank tests \citep{wilcoxon1945} and Holm's correction
+\citep{holm1979}. For comparisons within one dataset over resampled splits, \citet{dietterich1998tests} showed that
+naive paired tests are anti-conservative, and \citet{nadeau2003inference} proposed the corrected resampled $t$-test
+we use for the secondary within-dataset analysis.

@@ -1,0 +1,22 @@
+\begin{table}[h]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\caption{Per-dataset RMSE (regression), mean over 10 folds. Best value per dataset in bold.}
+\label{tab:perdataset_regression}
+\smallskip
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Dataset & Kumo Tabular & Linear reg. & Random forest & Extra trees & HistGB & XGBoost & LightGBM & CatBoost \\
+\midrule
+QSAR\_fish\_toxicity & \textbf{0.841} & 0.954 & 0.884 & 0.882 & 0.897 & 0.944 & 0.899 & 0.857 \\
+airfoil\_self\_noise & \textbf{0.780} & 4.823 & 1.648 & 1.390 & 1.789 & 1.462 & 1.790 & 1.466 \\
+cars & \textbf{2037.702} & 2944.899 & 2307.586 & 2418.453 & 2481.138 & 2389.355 & 2484.833 & 2111.137 \\
+concrete\_compressive\_strength & \textbf{3.490} & 10.436 & 4.777 & 4.509 & 4.376 & 4.148 & 4.406 & 3.928 \\
+energy\_efficiency & 0.416 & 2.943 & 0.449 & 0.438 & 0.482 & \textbf{0.289} & 0.482 & 0.291 \\
+red\_wine & 0.570 & 0.651 & 0.559 & \textbf{0.543} & 0.586 & 0.595 & 0.587 & 0.573 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

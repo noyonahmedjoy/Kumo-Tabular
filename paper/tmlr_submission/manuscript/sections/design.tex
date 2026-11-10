@@ -1,0 +1,91 @@
+\section{Experimental Design}
+\label{sec:design}
+
+The study has two parts. The \emph{main benchmark} (Sections~\ref{sec:design-suite}--\ref{sec:design-stats}) compares
+Kumo Tabular with seven classical models on 21 public datasets, using the dataset as the unit of inference. The
+\emph{case studies} (Section~\ref{sec:design-case}) are a re-implementation, with additional analyses, of the
+author's earlier two-dataset study, and are reported as secondary, dataset-specific evidence. All case-study numbers
+come from this re-implementation; the outputs of the earlier experiments are not available, and we make no claim that
+they are reproduced here. The dataset selection criteria, splits, models and computed metrics
+were fixed before the benchmark was run. The analysis plan---primary metrics, statistical tests and sensitivity
+analyses---was written down and committed to a local version-control repository after a pipeline check on one dataset
+(\texttt{wdbc}), whose complete results for all eight models we had seen, and before results for any other dataset
+existed (supplementary material). The plan is therefore not a formal preregistration: it has no external timestamp,
+and it was written with knowledge of one of the 21 datasets. One planned sensitivity analysis excludes \texttt{wdbc}.
+
+\subsection{Datasets}
+\label{sec:design-suite}
+We took all datasets from OpenML-CC18 \citep{bischl2021openml} and OpenML-CTR23 \citep{fischer2023ctr23} that have
+150 to 2{,}000 rows, at most 60 features, only numerical features, no missing values and, for classification, at most
+ten classes (the limit of the Kumo Tabular classification head). The filters selected 15 classification and 7
+regression datasets. One of them, \texttt{forest\_fires}, contained two text columns although its OpenML metadata
+listed none; it was excluded under the same criterion when loading revealed this, before any of its results existed.
+This leaves 15 classification and 6 regression datasets (Table~\ref{tab:datasets}). The restrictions define the regime we study---small, fully numerical tables---and
+avoid preprocessing choices (encoding, imputation, subsampling) that would confound the comparison. They also limit the
+scope of our conclusions (Section~\ref{sec:limitations}). One dataset, \texttt{wdbc}, is the Breast Cancer Wisconsin
+data also used in the case studies.
+
+\input{tables/datasets.tex}
+
+\subsection{Splits and seeds}
+We use the official OpenML task splits: 10-fold cross-validation, stratified for classification, first repetition for
+every task. The fold index (0--9) seeds every model and the random number generator of Kumo Tabular, whose predictions
+are deterministic given the seed.
+
+\subsection{Models}
+All models receive the same folds and no hyperparameter tuning; the comparison is between out-of-the-box methods.
+\begin{itemize}
+\item \textbf{Kumo Tabular} \texttt{small}, 8 ensemble members, training fold as context, test fold as query, float32
+inference (float16 autocast is disabled on GPUs older than compute capability 7.0).
+\item \textbf{Logistic regression} on standardized inputs (\texttt{max\_iter}=5000) for classification;
+\textbf{ordinary least squares} for regression.
+\item \textbf{Random forest} and \textbf{extra trees}, 500 trees each.
+\item \textbf{Histogram gradient boosting} (scikit-learn), \textbf{XGBoost}, \textbf{LightGBM} and \textbf{CatBoost},
+library defaults.
+\end{itemize}
+
+\subsection{Metrics}
+The primary metrics, fixed in advance, are the log loss for classification, a proper scoring rule for probabilistic
+predictions \citep{gneiting2007scoring}, and the root mean squared error (RMSE) for regression. Secondary metrics are
+accuracy, macro-averaged F1 and one-vs-rest macro-averaged ROC-AUC \citep{fawcett2006roc} for classification, and mean absolute error and
+$R^2$ for regression. Each metric is computed per fold and averaged over the ten folds of a dataset. For models that do
+not output a probability for a class absent from a training fold, that probability is zero.
+
+\subsection{Statistical analysis}
+\label{sec:design-stats}
+Folds of one dataset share most of their training rows and are not independent, so we use the per-dataset mean as the
+unit of analysis and treat datasets as independent replicates \citep{demsar2006comparisons}. For each task and metric
+we apply a Friedman test \citep{friedman1937ranks} to the ranks of all eight models, and compare Kumo Tabular with each
+baseline by a two-sided Wilcoxon signed-rank test on the per-dataset means, with Holm's correction \citep{holm1979}
+across the seven baselines. Only the primary metrics support confirmatory statements. We report wins, ties and losses
+and the median relative advantage as effect sizes. With six regression datasets the smallest attainable two-sided
+Wilcoxon $p$-value is $2/2^6\approx0.031$, which exceeds $0.05$ after Holm's correction for seven comparisons: the
+regression results are descriptive by design. The plan includes two sensitivity analyses: excluding \texttt{wdbc},
+which overlaps with the case studies (and is the dataset seen before the plan was written), and averaging related datasets into single units (the NASA software-defect
+datasets \texttt{pc1}, \texttt{pc3}, \texttt{pc4}, \texttt{kc2}; the two \texttt{mfeat} datasets) to reduce
+dependence between datasets.
+
+\subsection{Runtime}
+We record wall-clock fit and prediction time per fold. Kumo Tabular has no fitting stage; all of its cost is
+prediction. It ran on an NVIDIA GeForce GTX 980M (8\,GB) and the baselines on an Intel Core i7-6700HQ CPU, with one
+untimed warm-up call per dataset for Kumo Tabular. Runtimes therefore compare complete pipelines on the available
+hardware, not algorithms, and are reported descriptively.
+
+\subsection{Case studies}
+\label{sec:design-case}
+The case studies use the scikit-learn copies of Breast Cancer Wisconsin (569 rows, 30 features, malignant as positive
+class) and Diabetes (442 rows, 10 features, original units) \citep{street1993nuclear,efron2004lars}, five 80/20 splits
+(seeds 42--46, stratified for classification), the first three baselines above, threshold metrics and RMSE, a
+training-size study (25 to all training rows; seeds 42--44), the coverage of Kumo Tabular's nominal 90\% quantile
+interval, and a within-dataset paired analysis with the Nadeau--Bengio corrected resampled $t$-test
+\citep{nadeau2003inference} and Holm's correction. Because the splits of one dataset are dependent and only five, this
+analysis is descriptive.
+
+\subsection{Leakage controls and verification}
+Kumo Tabular receives the training fold with labels and the test fold without its target column; unit tests check that
+no test-row label reaches the model. OpenML splits are checked to be disjoint within each fold and to cover every row
+exactly once. Preprocessing (standardization for logistic regression; Kumo Tabular's internal recipe) is fitted on the
+training fold only. All case-study results were re-run with bit-identical metrics, and the case-study notebooks
+\citep{anonymous2026supplement} were executed in a separate cloud environment (NVIDIA T4, PyTorch 2.11, float16 inference), where results for Kumo Tabular,
+logistic and linear regression and random forests matched at the reported precision while histogram gradient boosting
+differed slightly, presumably because of a different scikit-learn version.

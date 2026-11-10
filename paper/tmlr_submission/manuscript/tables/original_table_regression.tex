@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\caption{Diabetes regression results (mean $\pm$ standard deviation over five random splits, 89 test rows each). Kumo Tabular uses the median quantile $q_{0.5}$ as point prediction. Best mean per metric in bold.}
+\label{tab:regression}
+\setlength{\tabcolsep}{5pt}
+\smallskip
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lcccc}
+\toprule
+Model & MAE & RMSE & $R^2$ & Time (s) \\
+\midrule
+Kumo Tabular & \textbf{42.48 $\pm$ 3.10} & \textbf{52.88 $\pm$ 3.47} & \textbf{0.503 $\pm$ 0.039} & 0.627 $\pm$ 0.053 \\
+Linear Reg. & 43.75 $\pm$ 3.59 & 53.27 $\pm$ 4.03 & 0.496 $\pm$ 0.046 & 0.003 $\pm$ 0.000 \\
+Random Forest & 45.23 $\pm$ 2.63 & 56.16 $\pm$ 3.31 & 0.440 $\pm$ 0.022 & 0.833 $\pm$ 0.024 \\
+HistGB & 45.85 $\pm$ 0.72 & 58.52 $\pm$ 1.67 & 0.390 $\pm$ 0.042 & 0.190 $\pm$ 0.031 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table*}

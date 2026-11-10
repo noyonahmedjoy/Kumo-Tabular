@@ -1,0 +1,52 @@
+2026-11-09 22:05:04 Kumo classification: loaded
+2026-11-09 22:05:04 Kumo regression: loaded
+2026-11-09 22:05:42 Kumo classification: loaded
+2026-11-09 22:05:43 Kumo regression: loaded
+2026-11-09 22:06:16 Kumo classification: loaded
+2026-11-09 22:06:16 Kumo regression: loaded
+2026-11-09 22:08:23 done wdbc (classification, 569 rows, 10 folds) in 127s; failed rows: 0
+2026-11-09 22:08:24 combined 1 datasets into results_by_fold.csv
+2026-11-09 22:09:11 Kumo classification: loaded
+2026-11-09 22:09:11 Kumo regression: loaded
+2026-11-09 22:10:32 done balance-scale (classification, 625 rows, 10 folds) in 80s; failed rows: 0
+2026-11-09 22:15:12 done mfeat-morphological (classification, 2000 rows, 10 folds) in 280s; failed rows: 0
+2026-11-09 23:02:05 done mfeat-zernike (classification, 2000 rows, 10 folds) in 2830s; failed rows: 0
+2026-11-09 23:03:40 done diabetes (classification, 768 rows, 10 folds) in 94s; failed rows: 0
+2026-11-09 23:05:35 done vehicle (classification, 846 rows, 10 folds) in 115s; failed rows: 0
+2026-11-09 23:08:14 done pc4 (classification, 1458 rows, 10 folds) in 158s; failed rows: 0
+2026-11-09 23:10:41 done pc3 (classification, 1563 rows, 10 folds) in 147s; failed rows: 0
+2026-11-09 23:12:17 done kc2 (classification, 522 rows, 10 folds) in 96s; failed rows: 0
+2026-11-09 23:14:05 done pc1 (classification, 1109 rows, 10 folds) in 108s; failed rows: 0
+2026-11-09 23:16:41 done banknote-authentication (classification, 1372 rows, 10 folds) in 156s; failed rows: 0
+2026-11-09 23:18:07 done blood-transfusion-service-center (classification, 748 rows, 10 folds) in 85s; failed rows: 0
+2026-11-09 23:20:20 done qsar-biodeg (classification, 1055 rows, 10 folds) in 133s; failed rows: 0
+2026-11-09 23:20:20 skip wdbc (already complete)
+2026-11-09 23:26:23 done steel-plates-fault (classification, 1941 rows, 10 folds) in 364s; failed rows: 0
+2026-11-09 23:28:20 done climate-model-simulation-crashes (classification, 540 rows, 10 folds) in 116s; failed rows: 0
+2026-11-09 23:29:37 done airfoil_self_noise (regression, 1503 rows, 10 folds) in 78s; failed rows: 0
+2026-11-09 23:30:51 done concrete_compressive_strength (regression, 1030 rows, 10 folds) in 74s; failed rows: 0
+2026-11-09 23:32:02 done energy_efficiency (regression, 768 rows, 10 folds) in 71s; failed rows: 0
+2026-11-09 23:35:06 Kumo classification: loaded
+2026-11-09 23:35:06 Kumo regression: loaded
+2026-11-09 23:35:08 skip balance-scale (already complete)
+2026-11-09 23:35:08 skip mfeat-morphological (already complete)
+2026-11-09 23:35:08 skip mfeat-zernike (already complete)
+2026-11-09 23:35:08 skip diabetes (already complete)
+2026-11-09 23:35:08 skip vehicle (already complete)
+2026-11-09 23:35:08 skip pc4 (already complete)
+2026-11-09 23:35:08 skip pc3 (already complete)
+2026-11-09 23:35:08 skip kc2 (already complete)
+2026-11-09 23:35:08 skip pc1 (already complete)
+2026-11-09 23:35:08 skip banknote-authentication (already complete)
+2026-11-09 23:35:08 skip blood-transfusion-service-center (already complete)
+2026-11-09 23:35:08 skip qsar-biodeg (already complete)
+2026-11-09 23:35:08 skip wdbc (already complete)
+2026-11-09 23:35:08 skip steel-plates-fault (already complete)
+2026-11-09 23:35:08 skip climate-model-simulation-crashes (already complete)
+2026-11-09 23:35:08 skip airfoil_self_noise (already complete)
+2026-11-09 23:35:08 skip concrete_compressive_strength (already complete)
+2026-11-09 23:35:08 skip energy_efficiency (already complete)
+2026-11-09 23:37:10 done QSAR_fish_toxicity (regression, 908 rows, 10 folds) in 123s; failed rows: 0
+2026-11-09 23:38:25 done red_wine (regression, 1599 rows, 10 folds) in 74s; failed rows: 0
+2026-11-09 23:39:35 done cars (regression, 804 rows, 10 folds) in 70s; failed rows: 0
+2026-11-09 23:39:35 combined 21 datasets into results_by_fold.csv
